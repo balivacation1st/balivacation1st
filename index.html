@@ -1,107 +1,336 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>Bali Vacation 1st | Private Tour & Airport Transfer</title>
+<meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Bali Vacation 1st | Private Tour & Airport Transfer</title>
+
+<meta name="description" content="Private Bali Tour, Airport Transfer, ATV, Rafting, Watersport and Bali Activities.">
+
 <style>
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f7f7f7;
-  color: #333;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
 
-.hero {
+body{
 
-  background:
-  linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-  url("IMG_0428.jpeg") center/cover no-repeat;
+font-family:Arial,sans-serif;
 
-  height: 100vh;
-  color: white;
+background:#f6f6f6;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+color:#333;
 
-  text-align: center;
-  padding: 20px;
+line-height:1.6;
 
 }
 
 
-.hero h1 {
-  font-size: 42px;
-}
+nav{
 
+position:fixed;
 
-.hero p {
-  font-size: 20px;
-}
+top:0;
 
+left:0;
 
-.container {
+width:100%;
 
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
+display:flex;
 
-}
+justify-content:space-between;
 
+align-items:center;
 
-.card {
+padding:18px 30px;
 
-  background: white;
-  padding: 20px;
-  margin: 20px 0;
+background:rgba(0,0,0,.35);
 
-  border-radius: 12px;
+backdrop-filter:blur(10px);
 
-  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+z-index:999;
 
 }
 
 
-.card img {
+.logo{
 
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
+color:white;
 
-}
+font-size:24px;
 
-
-.button {
-
-  display: inline-block;
-
-  background: #25D366;
-
-  color: white;
-
-  padding: 12px 25px;
-
-  border-radius: 25px;
-
-  text-decoration: none;
-
-  margin-top: 15px;
-
-  font-weight: bold;
+font-weight:bold;
 
 }
 
 
-h2 {
+nav ul{
 
-  text-align: center;
+display:flex;
+
+list-style:none;
+
+}
+
+
+nav li{
+
+margin-left:25px;
+
+}
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+color:#25D366;
+
+}
+
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+
+url("IMG_0428.jpeg")
+
+center center/cover no-repeat;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+
+}
+
+
+.hero h1{
+
+font-size:56px;
+
+margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+font-size:22px;
+
+margin-bottom:15px;
+
+max-width:700px;
+
+}
+
+
+.button{
+
+display:inline-block;
+
+background:#25D366;
+
+color:white;
+
+padding:15px 32px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+.button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+
+section{
+
+padding:70px 20px;
+
+}
+
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:50px;
+
+}
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+
+.card{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+.card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+
+.card-content{
+
+padding:20px;
+
+}
+
+
+.card h3{
+
+margin-bottom:10px;
+
+font-size:24px;
+
+}
+
+
+.card p{
+
+color:#666;
+
+margin-bottom:18px;
+
+}
+
+
+footer{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+padding:40px 20px;
+
+margin-top:50px;
+
+}
+
+
+@media(max-width:768px){
+
+nav{
+
+padding:15px 20px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
 
 }
 
@@ -109,118 +338,167 @@ h2 {
 
 </head>
 
-
 <body>
 
+<nav>
 
-<div class="hero">
+<div class="logo">
 
-<h1>
-Your Bali Journey Starts Here
-</h1>
-
-
-<p>
-Private Tours • Airport Transfer • Local Experiences
-</p>
-
-
-<p>
-Discover Bali with a trusted local driver
-</p>
-
-
-<a class="button" href="https://wa.me/62881038721069">
-Book Your Bali Experience
-</a>
-
+Bali Vacation 1st
 
 </div>
 
+<ul>
 
+<li><a href="#">Home</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#activities">Activities</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header class="hero">
+
+<h1>
+
+Your Bali Journey Starts Here
+
+</h1>
+
+<p>
+
+Private Tours • Airport Transfer • Bali Activities
+
+</p>
+
+<p>
+
+Discover the real beauty of Bali with a trusted local driver.
+
+</p>
+
+<a class="button"
+
+href="https://wa.me/62881038721069">
+
+Book Your Bali Experience
+
+</a>
+
+</header>
+
+<section id="services">
 
 <div class="container">
 
+<h2 class="title">
 
-
-<h2>
 Our Services
+
 </h2>
 
-
-
+<div class="grid">
 
 <div class="card">
 
 <img src="IMG_0163.jpeg">
 
-<h2>
-✈️ Airport Transfer
-</h2>
+<div class="card-content">
+
+<h3>Airport Transfer</h3>
 
 <p>
-Start your Bali holiday comfortably with a friendly local driver.
-Airport pickup and drop-off service with a smooth journey to your hotel.
+
+Comfortable airport pickup and drop-off with a friendly local driver.
+
 </p>
 
+<a class="button"
 
-<a class="button" href="https://wa.me/62881038721069">
-Book Airport Transfer
+href="https://wa.me/62881038721069">
+
+Book Now
+
 </a>
-
 
 </div>
 
-
-
-
+</div>
 
 <div class="card">
 
-<h2>
-🚗 Private Bali Tour
-</h2>
+<div class="card-content">
+
+<h3>Private Bali Tour</h3>
 
 <p>
-Explore Ubud, temples, waterfalls, beaches and hidden gems with your own private driver.
+
+Explore Bali with your own flexible private driver.
+
 </p>
+
+<a class="button"
+
+href="https://wa.me/62881038721069">
+
+Book Tour
+
+</a>
 
 </div>
 
+</div>
+</div>
+
+</div>
+
+</section>
 
 
+<section id="activities">
 
+<div class="container">
 
-<h2>
+<h2 class="title">
+
 Popular Bali Activities
+
 </h2>
 
 
-
+<div class="grid">
 
 
 <div class="card">
 
 <img src="atv.JPG">
 
-<h2>
-🏍️ ATV Adventure
-</h2>
+<div class="card-content">
 
+<h3>🏍️ ATV Adventure</h3>
 
 <p>
+
 Ride through Bali jungle, rivers and villages for an unforgettable adventure.
+
 </p>
 
+<a class="button"
 
-<a class="button" href="https://wa.me/62881038721069">
+href="https://wa.me/62881038721069">
+
 Book ATV
-</a>
 
+</a>
 
 </div>
 
-
+</div>
 
 
 
@@ -228,62 +506,174 @@ Book ATV
 
 <img src="rafting.JPG">
 
+<div class="card-content">
 
-<h2>
-🌊 Ayung River Rafting
-</h2>
-
+<h3>🌊 Ayung River Rafting</h3>
 
 <p>
-Enjoy Bali's beautiful river scenery with an exciting rafting experience.
+
+Enjoy Bali nature with an exciting river rafting experience.
+
 </p>
 
+<a class="button"
 
-<a class="button" href="https://wa.me/62881038721069">
+href="https://wa.me/62881038721069">
+
 Book Rafting
-</a>
 
+</a>
 
 </div>
 
+</div>
 
 
 
 
 <div class="card">
 
+<img src="IMG_0454.jpeg">
 
-<h2>
-Why Choose Us?
-</h2>
+<div class="card-content">
 
+<h3>🚤 Water Sports</h3>
 
 <p>
 
-✓ Local experience
-<br>
-✓ Flexible itinerary
-<br>
-✓ English speaking driver
-<br>
-✓ Trusted Bali service
+Experience Bali ocean activities including jet ski and other exciting water adventures.
 
 </p>
 
+<a class="button"
 
-</div>
+href="https://wa.me/62881038721069">
 
+Book Watersport
 
-
-
-
-<a class="button" href="https://wa.me/62881038721069">
-Book via WhatsApp
 </a>
 
+</div>
+
+</div>
+
 
 
 </div>
+
+</div>
+
+</section>
+
+
+
+
+<section>
+
+<div class="container">
+
+<h2 class="title">
+
+Why Choose Us?
+
+</h2>
+
+
+<div class="card">
+
+<div class="card-content">
+
+<p>
+
+✓ Local Bali experience
+
+<br>
+
+✓ Flexible private itinerary
+
+<br>
+
+✓ English speaking driver
+
+<br>
+
+✓ Comfortable journey
+
+<br>
+
+✓ Friendly local service
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="title">
+
+Ready To Explore Bali?
+
+</h2>
+
+
+<center>
+
+<a class="button"
+
+href="https://wa.me/62881038721069">
+
+Contact Us on WhatsApp
+
+</a>
+
+</center>
+
+
+</div>
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+
+©️ 2026 Bali Vacation 1st
+
+</p>
+
+<p>
+
+Private Bali Tour • Airport Transfer • Bali Experience
+
+</p>
+
+</footer>
+
+
+
+
+<a href="https://wa.me/62881038721069"
+
+style="position:fixed;right:20px;bottom:20px;background:#25D366;color:white;padding:15px 18px;border-radius:50%;text-decoration:none;font-size:22px;">
+
+☏
+
+</a>
+
 
 
 </body>
