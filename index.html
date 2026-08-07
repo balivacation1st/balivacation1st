@@ -10,7 +10,16 @@ body {
   margin: 0;
   background: #f7f7f7;
   color: #333;
-}
+}<nav>
+  <div class="logo">Bali Vacation 1st</div>
+
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Tours</a>
+    <a href="#">Transfer</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 nav {
   position: fixed;
   top: 0;
@@ -39,11 +48,16 @@ nav a {
 }
 .hero {
   background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
     url("IMG_0426.png") center/cover no-repeat;
   color: white;
-  padding: 120px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 h1 {
