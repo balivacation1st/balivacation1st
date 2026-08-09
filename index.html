@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bali Vacation 1st | Private Tour & Airport Transfer</title><meta name="description" content="Bali Vacation 1st offers private Bali tours, airport transfers, ATV, rafting, watersports and exciting Bali activities with a trusted local driver."><style>
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Bali Vacation 1st | Private Tour & Airport Transfer</title>
-
-<meta name="description" content="Private Bali Tour, Airport Transfer, ATV, Rafting, Watersport and Bali Activities.">
-
-<style>
+/* =========================
+   RESET
+========================= */
 
 *{
 margin:0;
@@ -24,846 +15,708 @@ scroll-behavior:smooth;
 }
 
 body{
-
-font-family:Arial,sans-serif;
-
+font-family:Arial,Helvetica,sans-serif;
 background:#f6f6f6;
-
 color:#333;
-
 line-height:1.6;
-
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
-
 position:fixed;
-
 top:0;
-
 left:0;
-
 width:100%;
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
-padding:18px 30px;
-
-background:rgba(0,0,0,.35);
-
+padding:12px 30px;
+background:rgba(0,0,0,.40);
 backdrop-filter:blur(10px);
-
+-webkit-backdrop-filter:blur(10px);
 z-index:999;
-
 }
 
-
-.logo{
-
-color:white;
-
-font-size:24px;
-
-font-weight:bold;
-
+.logo img{
+height:52px;
+width:auto;
+display:block;
 }
-
 
 nav ul{
-
 display:flex;
-
 list-style:none;
-
+align-items:center;
 }
-
 
 nav li{
-
 margin-left:25px;
-
 }
-
 
 nav a{
-
 color:white;
-
 text-decoration:none;
-
 font-weight:bold;
-
 transition:.3s;
-
 }
-
 
 nav a:hover{
-
 color:#25D366;
-
 }
 
 
-.hero{
+/* =========================
+   HERO
+========================= */
 
-height:100vh;
+.hero{
+min-height:100vh;
 
 background:
-
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-
+linear-gradient(
+rgba(0,0,0,.48),
+rgba(0,0,0,.48)
+),
 url("IMG_0428.jpeg")
-
 center center/cover no-repeat;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
 
 text-align:center;
 
-padding:20px;
+padding:100px 20px 50px;
 
 color:white;
-
 }
 
+.hero-logo{
+margin-bottom:25px;
+}
+
+.hero-logo img{
+width:min(420px,80vw);
+height:auto;
+display:block;
+filter:drop-shadow(0 5px 12px rgba(0,0,0,.45));
+}
 
 .hero h1{
-
-font-size:56px;
-
-margin-bottom:20px;
-
+font-size:52px;
+line-height:1.15;
+margin-bottom:18px;
+text-shadow:0 3px 10px rgba(0,0,0,.5);
 }
-
 
 .hero p{
+font-size:21px;
+margin-bottom:12px;
+max-width:750px;
+text-shadow:0 2px 6px rgba(0,0,0,.5);
+}
 
-font-size:22px;
-
-margin-bottom:15px;
-
-max-width:700px;
-
+.hero .button{
+margin-top:15px;
 }
 
 
-.button{
+/* =========================
+   BUTTON
+========================= */
 
+.button{
 display:inline-block;
+background:#25D366;
+color:white;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+border:none;
+}
+
+.button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
+color:#222;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+gap:25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-7px);
+box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+display:block;
+}
+
+.card-content{
+padding:22px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:24px;
+color:#222;
+}
+
+.card p{
+color:#666;
+margin-bottom:16px;
+}
+
+.duration{
+font-weight:bold;
+color:#25D366 !important;
+margin-bottom:12px !important;
+}
+
+
+/* =========================
+   TOUR PRICE
+========================= */
+
+.price{
+font-size:19px;
+color:#222 !important;
+margin-top:12px;
+}
+
+.price strong{
+color:#111;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.07);
+text-align:center;
+}
+
+.feature-icon{
+font-size:35px;
+margin-bottom:10px;
+}
+
+.feature h3{
+margin-bottom:8px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section{
+background:#fff;
+text-align:center;
+}
+
+.contact-section p{
+max-width:650px;
+margin:0 auto 25px;
+color:#666;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:0;
+}
+
+footer p{
+margin:5px 0;
+color:#ccc;
+}
+
+
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+
+width:58px;
+height:58px;
 
 background:#25D366;
-
 color:white;
 
-padding:15px 32px;
+display:flex;
+align-items:center;
+justify-content:center;
 
-border-radius:40px;
+border-radius:50%;
 
 text-decoration:none;
 
-font-weight:bold;
+font-size:28px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+z-index:1000;
 
 transition:.3s;
+}
 
+.whatsapp:hover{
+transform:scale(1.08);
 }
 
 
-.button:hover{
-
-transform:translateY(-3px);
-
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-}
-
-
-section{
-
-padding:70px 20px;
-
-}
-
-
-.container{
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-
-.title{
-
-text-align:center;
-
-font-size:38px;
-
-margin-bottom:50px;
-
-}
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:25px;
-
-}
-
-
-.card{
-
-background:white;
-
-border-radius:18px;
-
-overflow:hidden;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-
-.card img{
-
-width:100%;
-
-height:230px;
-
-object-fit:cover;
-
-display:block;
-
-}
-
-
-.card-content{
-
-padding:20px;
-
-}
-
-
-.card h3{
-
-margin-bottom:10px;
-
-font-size:24px;
-
-}
-
-
-.card p{
-
-color:#666;
-
-margin-bottom:18px;
-
-}
-
-
-footer{
-
-background:#111;
-
-color:white;
-
-text-align:center;
-
-padding:40px 20px;
-
-margin-top:50px;
-
-}
-
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
 nav{
+padding:10px 18px;
+}
 
-padding:15px 20px;
-
+.logo img{
+height:42px;
 }
 
 nav ul{
-
 display:none;
+}
 
+.hero{
+padding-top:100px;
+}
+
+.hero-logo img{
+width:min(330px,82vw);
 }
 
 .hero h1{
-
-font-size:38px;
-
+font-size:36px;
 }
 
 .hero p{
-
 font-size:18px;
-
 }
 
 .title{
-
 font-size:30px;
+margin-bottom:35px;
+}
 
+section{
+padding:60px 18px;
+}
+
+.card img{
+height:220px;
+}
+
+.card-content{
+padding:20px;
 }
 
 }
 
-</style>
 
-</head>
+/* =========================
+   SMALL PHONES
+========================= */
 
-<body>
+@media(max-width:400px){
 
-<nav>
+.hero h1{
+font-size:31px;
+}
 
-<div class="logo">
+.hero p{
+font-size:17px;
+}
 
-Bali Vacation 1st
+.hero-logo img{
+width:78vw;
+}
 
-</div>
+.title{
+font-size:28px;
+}
 
-<ul>
+.button{
+padding:13px 24px;
+}
 
-<li><a href="#">Home</a></li>
+}
 
-<li><a href="#services">Services</a></li>
-
-<li><a href="#activities">Activities</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<header class="hero">
-
-<h1>
-
+</style></head><body><!-- =========================
+     NAVIGATION
+========================= --><nav><div class="logo"><a href="#home"><img src="logo.png" alt="Bali Vacation 1st"></a></div><ul><li>
+<a href="#home">Home</a>
+</li><li>
+<a href="#services">Services</a>
+</li><li>
+<a href="#activities">Activities</a>
+</li><li>
+<a href="#tours">Tours</a>
+</li><li>
+<a href="#contact">Contact</a>
+</li></ul></nav><!-- =========================
+     HERO
+========================= --><header class="hero" id="home"><div class="hero-logo"><img src="logo.png" alt="Bali Vacation 1st"></div><h1>
 Your Bali Journey Starts Here
-
-</h1>
-
-<p>
-
+</h1><p>
 Private Tours • Airport Transfer • Bali Activities
-
-</p>
-
-<p>
-
+</p><p>
 Discover the real beauty of Bali with a trusted local driver.
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069"
+target="_blank">
 
 Book Your Bali Experience
 
-</a>
-
-</header>
-
-<section id="services">
-
-<div class="container">
-
-<h2 class="title">
-
+</a></header><!-- =========================
+     SERVICES
+========================= --><section id="services"><div class="container"><h2 class="title">
 Our Services
+</h2><div class="grid"><!-- AIRPORT TRANSFER --><div class="card"><img
+src="IMG_0163.jpeg"
+alt="Bali Airport Transfer">
 
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="IMG_0163.jpeg">
-
-<div class="card-content">
-
-<h3>Airport Transfer</h3>
-
-<p>
-
+<div class="card-content"><h3>
+✈️ Airport Transfer
+</h3><p>
 Comfortable airport pickup and drop-off with a friendly local driver.
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20book%20an%20airport%20transfer."
+target="_blank">
 
 Book Now
 
-</a>
+</a></div></div><!-- PRIVATE TOUR --><div class="card"><img
+src="monyet.JPG"
+alt="Private Bali Tour">
 
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-content">
-
-<h3>Private Bali Tour</h3>
-
-<p>
-
-Explore Bali with your own flexible private driver.
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+<div class="card-content"><h3>
+🚗 Private Bali Tour
+</h3><p>
+Explore Bali with your own flexible private car and local driver.
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20ask%20about%20a%20private%20Bali%20tour."
+target="_blank">
 
 Book Tour
 
-</a>
-
-</div>
-
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="activities">
-
-<div class="container">
-
-<h2 class="title">
-
+</a></div></div></div></div></section><!-- =========================
+     ACTIVITIES
+========================= --><section id="activities"><div class="container"><h2 class="title">
 Popular Bali Activities
+</h2><div class="grid"><!-- ATV --><div class="card"><img
+src="atv.JPG"
+alt="ATV Adventure Bali">
 
-</h2>
-
-
-<div class="grid">
-
-
-<div class="card">
-
-<img src="atv.JPG">
-
-<div class="card-content">
-
-<h3>🏍️ ATV Adventure</h3>
-
-<p>
-
+<div class="card-content"><h3>
+🏍️ ATV Adventure
+</h3><p>
 Ride through Bali jungle, rivers and villages for an unforgettable adventure.
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20book%20ATV."
+target="_blank">
 
 Book ATV
 
-</a>
+</a></div></div><!-- RAFTING --><div class="card"><img
+src="rafting.JPG"
+alt="Ayung River Rafting">
 
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="rafting.JPG">
-
-<div class="card-content">
-
-<h3>🌊 Ayung River Rafting</h3>
-
-<p>
-
+<div class="card-content"><h3>
+🌊 Ayung River Rafting
+</h3><p>
 Enjoy Bali nature with an exciting river rafting experience.
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20book%20Ayung%20River%20Rafting."
+target="_blank">
 
 Book Rafting
 
-</a>
+</a></div></div><!-- WATERSPORT --><div class="card"><img
+src="IMG_0454.jpeg"
+alt="Bali Watersport">
 
-</div>
-
-</div>
-
-
-
-
-<div class="card">
-
-<img src="IMG_0454.jpeg">
-
-<div class="card-content">
-
-<h3>🚤 Water Sports</h3>
-
-<p>
-
+<div class="card-content"><h3>
+🚤 Water Sports
+</h3><p>
 Experience Bali ocean activities including jet ski and other exciting water adventures.
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20book%20Bali%20watersports."
+target="_blank">
 
 Book Watersport
 
-</a>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-</section>
-<section id="tours">
-
-<div class="container">
-
-<h2 class="title">
+</a></div></div></div></div></section><!-- =========================
+     TOUR PACKAGES
+========================= --><section id="tours"><div class="container"><h2 class="title">
 Popular Bali Tour Packages
-</h2>
+</h2><div class="grid"><!-- UBUD PRIVATE --><div class="card"><img
+src="monyet.JPG"
+alt="Ubud Private Tour">
 
-<div class="grid">
-
-
-<div class="card">
-<img src="monyet.JPG" alt="Ubud Private Tour">
-<div class="card-content">
-
-<h3>🌿 Ubud Private Tour</h3>
-<p class="duration">⏱ 8–10 Hours</p
-<p>
+<div class="card-content"><h3>
+🌿 Ubud Private Tour
+</h3><p class="duration">
+⏱ 8–10 Hours
+</p><p>
 Explore Ubud and its beautiful surroundings with your own private car and local driver.
-</p>
-
-<p>
-<strong>From IDR 700K / car</strong>
-</p>
-
-<p>
+</p><p class="price">
+<strong>
+From IDR 700K / car
+</strong>
+</p><p>
 Up to 5 adults per car.
-</p>
-
-<a class="button"
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20ask%20about%20the%20Ubud%20Private%20Tour."
+target="_blank">
 
 Ask Availability
 
-</a>
+</a></div></div><!-- UBUD EXTENDED --><div class="card"><img
+src="sawah.JPG"
+alt="Ubud Extended Tour">
 
-</div>
-
-</div>
-
-
-
-<div class="card">
-  <img src="sawah.JPG" alt="Ubud Extended Tour">
-
-<div class="card-content">
-
-<h3>🌿 Ubud Extended Tour</h3>
-<p class="duration">⏱ 10 Hours</p>
-<p>
+<div class="card-content"><h3>
+🌿 Ubud Extended Tour
+</h3><p class="duration">
+⏱ 10 Hours
+</p><p>
 Discover Tegalalang, Tirta Empul and other beautiful places around Ubud.
-</p>
-
-<p>
-<strong>From IDR 800K / car</strong>
-</p>
-
-<p>
+</p><p class="price">
+<strong>
+From IDR 800K / car
+</strong>
+</p><p>
 Up to 5 adults per car.
-</p>
-
-<a class="button"
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20ask%20about%20the%20Ubud%20Extended%20Tour."
+target="_blank">
 
 Ask Availability
 
-</a>
+</a></div></div><!-- ULUWATU --><div class="card"><img
+src="kecak.JPG"
+alt="Uluwatu Sunset Tour">
 
-</div>
-
-</div>
-
-
-
-<div class="card">
-  <img src="kecak.JPG" alt="Uluwatu Sunset Tour">
-
-<div class="card-content">
-
-<h3>🌅 Uluwatu Sunset Tour</h3>
-<p class="duration">⏱ 8–10 Hours</p>
-<p>
+<div class="card-content"><h3>
+🌅 Uluwatu Sunset Tour
+</h3><p class="duration">
+⏱ 8–10 Hours
+</p><p>
 Explore the southern part of Bali and enjoy the spectacular sunset around Uluwatu.
-</p>
-
-<p>
-<strong>From IDR 700K / car</strong>
-</p>
-
-<p>
+</p><p class="price">
+<strong>
+From IDR 700K / car
+</strong>
+</p><p>
 Up to 5 adults per car.
-</p>
-
-<a class="button"
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20ask%20about%20the%20Uluwatu%20Sunset%20Tour."
+target="_blank">
 
 Ask Availability
 
-</a>
+</a></div></div><!-- NUSA PENIDA --><div class="card"><img
+src="penida.JPG"
+alt="Nusa Penida Day Trip">
 
-</div>
-
-</div>
-
-
-
-<div class="card">
-  <img src="penida.JPG" alt="Nusa Penida Day Trip">
-
-<div class="card-content">
-
-<h3>🏝️ Nusa Penida Day Trip</h3>
-<p class="duration">⏱ Full Day</p>
-<p>
+<div class="card-content"><h3>
+🏝️ Nusa Penida Day Trip
+</h3><p class="duration">
+⏱ Full Day
+</p><p>
 Choose West or East Nusa Penida for a full-day private island experience.
-</p>
-
-<p>
-<strong>From IDR 800K / person</strong>
-</p>
-
-<p>
+</p><p class="price">
+<strong>
+From IDR 800K / person
+</strong>
+</p><p>
 West + East: IDR 1M / person
-</p>
-
-<a class="button"
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20ask%20about%20the%20Nusa%20Penida%20Day%20Trip."
+target="_blank">
 
 Ask Availability
 
-</a>
+</a></div></div><!-- MOUNT BATUR --><div class="card"><img
+src="jeep.JPG"
+alt="Mount Batur Jeep Sunrise">
 
-</div>
-
-</div>
-
-
-
-<div class="card">
-  <img src="jeep.JPG" alt="Mount Batur Jeep Sunrise">
-
-<div class="card-content">
-
-<h3>🌋 Mount Batur Jeep Sunrise</h3>
-<p class="duration">⏱ Half Day</p>
-<p>
+<div class="card-content"><h3>
+🌋 Mount Batur Jeep Sunrise
+</h3><p class="duration">
+⏱ Half Day
+</p><p>
 Watch the sunrise from Mount Batur with a private jeep experience, hotel transfer and breakfast.
-</p>
-
-<p>
-<strong>IDR 1.05M / person</strong>
-</p>
-
-<p>
+</p><p class="price">
+<strong>
+IDR 1.05M / person
+</strong>
+</p><p>
 Minimum 2 persons.
-</p>
-
-<a class="button"
-href="https://wa.me/62881038721069">
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20book%20the%20Mount%20Batur%20Jeep%20Sunrise."
+target="_blank">
 
 Book Sunrise Tour
 
-</a>
+</a></div></div></div><p style="text-align:center;margin-top:35px;color:#666;">*Entrance tickets are not included. Guests pay entrance fees directly at each attraction.
 
-</div>
-
-</div>
-
-
-
-</div>
-
-<p style="text-align:center; margin-top:30px; color:#666;">
-
-*Entrance tickets are not included. Guests pay entrance fees directly at each attraction.
-
-<br>
+<br><br>
 
 *Nusa Penida retribution fee: IDR 25,000 / person, not included.
 
-<br>
+<br><br>
 
 *Luggage capacity depends on luggage size.
 
-</p>
-
-</div>
-
-</section>
-
-
-
-<section>
-
-<div class="container">
-
-<h2 class="title">
-
+</p></div></section><!-- =========================
+     WHY CHOOSE US
+========================= --><section><div class="container"><h2 class="title">
 Why Choose Us?
-
-</h2>
-
-
-<div class="card">
-
-<div class="card-content">
-
-<p>
-
-✓ Local Bali experience
-
-<br>
-
-✓ Flexible private itinerary
-
-<br>
-
-✓ English speaking driver
-
-<br>
-
-✓ Comfortable journey
-
-<br>
-
-✓ Friendly local service
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section id="contact">
-
-<div class="container">
-
-<h2 class="title">
-
+</h2><div class="features"><div class="feature"><div class="feature-icon">
+🌴
+</div><h3>
+Local Bali Experience
+</h3><p>
+Experience Bali with a local driver who knows the island.
+</p></div><div class="feature"><div class="feature-icon">
+🚗
+</div><h3>
+Private & Flexible
+</h3><p>
+Enjoy a private journey with a flexible itinerary.
+</p></div><div class="feature"><div class="feature-icon">
+💬
+</div><h3>
+English Speaking Driver
+</h3><p>
+Easy communication throughout your Bali experience.
+</p></div><div class="feature"><div class="feature-icon">
+⭐
+</div><h3>
+Friendly Service
+</h3><p>
+Comfortable, reliable and friendly local service.
+</p></div></div></div></section><!-- =========================
+     CONTACT
+========================= --><section id="contact" class="contact-section"><div class="container"><h2 class="title">
 Ready To Explore Bali?
-
-</h2>
-
-
-<center>
-
-<a class="button"
-
-href="https://wa.me/62881038721069">
+</h2><p>
+Tell us what kind of Bali experience you are looking for.
+We will help you plan your trip.
+</p><a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%20would%20like%20to%20plan%20my%20Bali%20trip."
+target="_blank">
 
 Contact Us on WhatsApp
 
-</a>
-
-</center>
-
-
-</div>
-
-</section>
-
-
-
-
-<footer>
-
-<p>
-
+</a></div></section><!-- =========================
+     FOOTER
+========================= --><footer><p>
 ©️ 2026 Bali Vacation 1st
-
-</p>
-
-<p>
-
+</p><p>
 Private Bali Tour • Airport Transfer • Bali Experience
-
-</p>
-
-</footer>
-
-
-
-
-<a href="https://wa.me/62881038721069"
-
-style="position:fixed;right:20px;bottom:20px;background:#25D366;color:white;padding:15px 18px;border-radius:50%;text-decoration:none;font-size:22px;">
+</p></footer><!-- =========================
+     FLOATING WHATSAPP
+========================= --><a
+class="whatsapp"
+href="https://wa.me/62881038721069"
+target="_blank"
+aria-label="Contact Bali Vacation 1st on WhatsApp">
 
 ☏
 
-</a>
-
-
-
-</body>
-
-</html>
+</a></body></html>
