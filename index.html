@@ -11,8 +11,6 @@
 
 <style>
 
-<style>
-
 /* =========================
    RESET
 ========================= */
@@ -146,48 +144,6 @@ margin-top:18px;
 
 
 /* =========================
-   MOBILE HERO
-========================= */
-
-@media(max-width:800px){
-
-.hero{
-min-height:0;
-aspect-ratio:4 / 5;
-padding:60px 20px 35px;
-}
-
-.hero-logo{
-margin-bottom:20px;
-}
-
-.hero-logo img{
-width:64vw;
-max-width:272px;
-}
-
-.hero h1{
-font-size:38px;
-line-height:1.15;
-margin-bottom:14px;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.5;
-margin-bottom:8px;
-}
-
-.hero .tagline{
-font-size:16px;
-}
-
-.hero .button{
-margin-top:15px;
-}
-
-}
-/* =========================
    BUTTON
 ========================= */
 
@@ -253,7 +209,7 @@ gap:25px;
 ========================= */
 
 .card{
-background:white;
+background:#fff;
 border-radius:18px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
@@ -331,11 +287,11 @@ margin-bottom:8px;
 ========================= */
 
 .combo-section{
-background:#f5f2eb;
+background:#F5F2EA;
 }
 
 .combo-card{
-background:#ffffff !important;
+background:#ffffff;
 border-radius:18px;
 padding:28px;
 box-shadow:0 10px 25px rgba(0,0,0,.07);
@@ -374,7 +330,7 @@ gap:20px;
 }
 
 .feature{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:18px;
 box-shadow:0 10px 25px rgba(0,0,0,.07);
@@ -433,27 +389,18 @@ color:#ccc;
 position:fixed;
 right:20px;
 bottom:20px;
-
 width:58px;
 height:58px;
-
 background:#25D366;
 color:white;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 border-radius:50%;
-
 text-decoration:none;
-
 font-size:28px;
-
 box-shadow:0 5px 20px rgba(0,0,0,.25);
-
 z-index:1000;
-
 transition:.3s;
 }
 
@@ -461,6 +408,7 @@ transition:.3s;
 width:32px;
 height:32px;
 display:block;
+fill:white;
 }
 
 .whatsapp:hover{
@@ -469,7 +417,7 @@ transform:scale(1.08);
 
 
 /* =========================
-   MOBILE NAVIGATION
+   TABLET / MOBILE
 ========================= */
 
 @media(max-width:800px){
@@ -494,12 +442,42 @@ nav a{
 font-size:13px;
 }
 
+
+/* MOBILE HERO */
+
+.hero{
+min-height:0;
+aspect-ratio:4 / 5;
+padding:60px 20px 35px;
+}
+
+.hero-logo{
+margin-bottom:20px;
+}
+
+.hero-logo img{
+width:64vw;
+max-width:272px;
+}
+
 .hero h1{
 font-size:38px;
+line-height:1.15;
+margin-bottom:14px;
 }
 
 .hero p{
 font-size:18px;
+line-height:1.5;
+margin-bottom:8px;
+}
+
+.hero .tagline{
+font-size:16px;
+}
+
+.hero .button{
+margin-top:15px;
 }
 
 .title{
@@ -510,7 +488,7 @@ font-size:32px;
 
 
 /* =========================
-   MOBILE PHONES
+   SMALL MOBILE PHONES
 ========================= */
 
 @media(max-width:520px){
@@ -524,11 +502,13 @@ display:none;
 }
 
 .hero{
-padding-top:110px;
+aspect-ratio:4 / 5;
+padding:55px 18px 30px;
 }
 
 .hero-logo img{
-width:min(340px,85vw);
+width:64vw;
+max-width:272px;
 }
 
 .hero h1{
@@ -558,7 +538,50 @@ object-fit:cover;
 display:block;
 }
 
+.combo-card{
+padding:24px;
 }
+
+.button{
+padding:13px 24px;
+}
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+.hero-logo img{
+width:62vw;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.hero .tagline{
+font-size:15px;
+}
+
+.button{
+font-size:14px;
+padding:12px 20px;
+}
+
+}
+
+
+/* =========================
+   END CSS
+========================= */
 
 </style>
 
@@ -574,9 +597,15 @@ display:block;
 <nav>
 
 <div class="logo">
+
 <a href="#home">
-<img src="logo.png" alt="Bali Vacation 1st">
+
+<img
+src="logo.png"
+alt="Bali Vacation 1st">
+
 </a>
+
 </div>
 
 <ul>
@@ -610,10 +639,16 @@ display:block;
      HERO
 ========================= -->
 
-<header class="hero" id="home">
+<header
+class="hero"
+id="home">
 
 <div class="hero-logo">
-<img src="logo.png" alt="Bali Vacation 1st">
+
+<img
+src="logo.png"
+alt="Bali Vacation 1st">
+
 </div>
 
 <h1>
@@ -644,7 +679,9 @@ Plan Your Bali Experience
      FEATURED ACTIVITIES
 ========================= -->
 
-<section id="activities" class="featured">
+<section
+id="activities"
+class="featured">
 
 <div class="container">
 
@@ -660,10 +697,10 @@ transport and your day together in one private package.
 <div class="grid">
 
 
+<!-- =========================
+     ATV
+========================= -->
 
-
-
-<!-- RAFTING -->
 <div class="card">
 
 <img
@@ -688,6 +725,7 @@ for an unforgettable adventure.
 <a
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20a%20Bali%20ATV%20Adventure.%20%0APlease%20help%20me%20check%20the%20price%20and%20availability.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
+target="_blank">
 
 Check ATV Price & Availability
 
@@ -696,6 +734,11 @@ Check ATV Price & Availability
 </div>
 
 </div>
+
+
+<!-- =========================
+     RAFTING
+========================= -->
 
 <div class="card">
 
@@ -732,7 +775,9 @@ Check Rafting Price & Availability
 </div>
 
 
-<!-- WATERSPORT -->
+<!-- =========================
+     WATERSPORT
+========================= -->
 
 <div class="card">
 
@@ -768,6 +813,7 @@ Check Watersport Price & Availability
 
 </div>
 
+
 </div>
 
 </div>
@@ -779,7 +825,9 @@ Check Watersport Price & Availability
      COMBO EXPERIENCES
 ========================= -->
 
-<section id="packages" class="combo-section">
+<section
+id="packages"
+class="combo-section">
 
 <div class="container">
 
@@ -815,13 +863,9 @@ a relaxing experience at Telaga Singha.
 <ul class="combo-list">
 
 <li>🏍️ ATV Adventure</li>
-
 <li>🌊 White Water Rafting</li>
-
 <li>🌴 Telaga Singha</li>
-
 <li>🚗 Private hotel transportation</li>
-
 <li>🍽️ Lunch can be arranged</li>
 
 </ul>
@@ -831,7 +875,7 @@ class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20ATV%20%2B%20Rafting%20%2B%20Telaga%20Singha%20package.%20%0APlease%20help%20me%20check%20the%20price%20and%20availability.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank">
 
-Check Package Price & Availibility
+Check Package Price & Availability
 
 </a>
 
@@ -858,13 +902,9 @@ sunset entertainment and a relaxed seafood dinner.
 <ul class="combo-list">
 
 <li>🚤 Bali Watersports</li>
-
 <li>🌅 Melasti Beach</li>
-
 <li>💃 Kecak Dance</li>
-
 <li>🍽️ Jimbaran seafood dinner</li>
-
 <li>🚗 Private hotel transportation</li>
 
 </ul>
@@ -872,8 +912,9 @@ sunset entertainment and a relaxed seafood dinner.
 <a
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Watersport%20%2B%20Melasti%20Kecak%20%2B%20Jimbaran%20package.%20%0APlease%20help%20me%20check%20the%20price%20and%20availability.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
+target="_blank">
 
-Check Package Price & Availibility
+Check Package Price & Availability
 
 </a>
 
@@ -900,20 +941,16 @@ traditional craftsmanship around the Ubud area.
 <ul class="combo-list">
 
 <li>🏍️ ATV Adventure</li>
-
 <li>🌊 White Water Rafting</li>
-
 <li>💍 Silver Smith</li>
-
 <li>🎨 Balinese Painting</li>
-
 <li>🌾 Optional rice terrace or temple stop</li>
 
 </ul>
 
 <a
 class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20ATV%20%2B%20Rafting%20%2B%20Ubud%20Art%20package.%20Please%20send%20me%20the%20details."
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20ATV%20%2B%20Rafting%20%2B%20Ubud%20Art%20package.%20%0APlease%20send%20me%20the%20details."
 target="_blank">
 
 Ask About This Package
@@ -943,15 +980,10 @@ Tell us what you want to do and we can help arrange your day.
 <ul class="combo-list">
 
 <li>🏍️ ATV</li>
-
 <li>🌊 Rafting</li>
-
 <li>🚤 Watersports</li>
-
 <li>🎨 Art & local experiences</li>
-
 <li>🦁 Wildlife & family activities</li>
-
 <li>🏝️ Nusa Penida</li>
 
 </ul>
@@ -1320,6 +1352,8 @@ traditional arts and local experiences into a private day that suits you.
 <div class="grid">
 
 
+<!-- UBUD ADVENTURE -->
+
 <div class="combo-card">
 
 <h3>
@@ -1355,6 +1389,8 @@ Plan Ubud Experience
 
 </div>
 
+
+<!-- UBUD CULTURE -->
 
 <div class="combo-card">
 
@@ -1418,6 +1454,8 @@ sunset entertainment and a relaxed evening.
 <div class="grid">
 
 
+<!-- SOUTH BALI 1 -->
+
 <div class="combo-card">
 
 <h3>
@@ -1450,6 +1488,8 @@ Plan South Bali Experience
 
 </div>
 
+
+<!-- SOUTH BALI 2 -->
 
 <div class="combo-card">
 
@@ -1511,6 +1551,8 @@ transfer. Transfer cost depends on your hotel location.
 <div class="grid">
 
 
+<!-- NUSA PENIDA CARD -->
+
 <div class="card">
 
 <img
@@ -1555,6 +1597,8 @@ Get Nusa Penida Package
 
 </div>
 
+
+<!-- NUSA PENIDA OPTIONS -->
 
 <div class="combo-card">
 
@@ -1622,6 +1666,7 @@ transfer from Ngurah Rai International Airport.
 
 <div class="grid">
 
+
 <div class="card">
 
 <img
@@ -1652,6 +1697,7 @@ Ask About Airport Transfer
 </div>
 
 </div>
+
 
 </div>
 
@@ -1798,7 +1844,9 @@ Ask About Photography
      CONTACT
 ========================= -->
 
-<section id="contact" class="contact-section">
+<section
+id="contact"
+class="contact-section">
 
 <div class="container">
 
@@ -1857,8 +1905,12 @@ href="https://wa.me/62881038721069"
 target="_blank"
 aria-label="Contact Bali Vacation 1st on WhatsApp">
 
-<svg viewBox="0 0 32 32" aria-hidden="true">
+<svg
+viewBox="0 0 32 32"
+aria-hidden="true">
+
 <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3.5 29l6.8-1.8C12.3 28 14.1 28.5 16 28.5 23.2 28.5 29 22.7 29 15.5S23.2 3 16 3zm0 23.2c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-4 .9 1-3.9-.2-.3C6.7 20.9 6.2 18.5 6.2 16 6.2 10.6 10.6 6.2 16 6.2S25.8 10.6 25.8 16 21.4 26.2 16 26.2zm5.4-7.7c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.8 5.1 2.2.9 2.7.7 3.2.7.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.4z"/>
+
 </svg>
 
 </a>
