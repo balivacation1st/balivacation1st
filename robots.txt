@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://balivacation1st.github.io/balivacation1st/sitemap.xml
