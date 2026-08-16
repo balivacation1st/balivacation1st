@@ -1604,30 +1604,34 @@ Customize My Day
 <!-- =========================
      NUSA PENIDA
 ========================= -->
+<!-- =========================
+     NUSA PENIDA
+========================= -->
 
 <section>
 
 <div class="container">
 
 <h2 class="title">
-Nusa Penida Experience
+Nusa Penida West Day Trip
 </h2>
 
 <p class="section-intro">
-Enjoy a Nusa Penida day trip with an arranged package and hotel
-transfer. Transfer cost depends on your hotel location.
+Enjoy a private West Nusa Penida experience with fast boat,
+private transportation and a full-day island adventure.
+The more people you travel together, the less you pay per person.
 </p>
 
 <div class="grid">
 
 
-<!-- NUSA PENIDA CARD -->
+<!-- NUSA PENIDA MAIN CARD -->
 
 <div class="card">
 
 <img
 src="penida.JPG"
-alt="Nusa Penida Day Trip">
+alt="West Nusa Penida Day Trip">
 
 <div class="card-content">
 
@@ -1636,74 +1640,146 @@ ISLAND EXPERIENCE
 </span>
 
 <h3>
-🏝️ Nusa Penida Day Trip
+🏝️ West Nusa Penida
 </h3>
 
 <p class="duration">
-⏱ Full Day
+⏱ Full Day • 09.00 – 16.00 WITA
 </p>
 
 <p>
-Choose a West or East Nusa Penida experience. We can arrange the
-package and hotel transfer based on your location.
+Private West Nusa Penida tour including return fast boat,
+private AC car, driver, petrol and entrance tickets.
 </p>
 
 <p>
 <strong>
-Hotel transfer price depends on hotel location.
+From IDR 625K / person
 </strong>
 </p>
 
-<a
-class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20a%20Nusa%20Penida%20package.%20Please%20let%20me%20know%20the%20price%20and%20hotel%20transfer%20cost."
-target="_blank">
-
-Get Nusa Penida Package
-
-</a>
+<p>
+Based on 6 guests.
+</p>
 
 </div>
 
 </div>
 
 
-<!-- NUSA PENIDA OPTIONS -->
+<!-- INTERACTIVE PRICE CALCULATOR -->
 
 <div class="combo-card">
 
 <h3>
-🏝️ West or East Penida
+💰 Choose Your Group Size
 </h3>
 
 <p>
-Tell us your hotel location, travel date and preferred Penida
-experience. We will check the available package and arrange your
-transfer.
+Traveling together? The more guests you have,
+the lower the price per person.
 </p>
+
+<div style="text-align:center;margin:25px 0;">
+
+<p style="margin-bottom:8px;color:#666;">
+Number of Guests
+</p>
+
+<div style="display:flex;align-items:center;justify-content:center;gap:18px;">
+
+<button
+type="button"
+onclick="changeGuests(-1)"
+style="width:48px;height:48px;border:none;border-radius:50%;font-size:25px;cursor:pointer;background:#4F5544;color:white;">
+
+−
+
+</button>
+
+<strong
+id="guestCount"
+style="font-size:32px;min-width:40px;display:inline-block;">
+
+6
+
+</strong>
+
+<button
+type="button"
+onclick="changeGuests(1)"
+style="width:48px;height:48px;border:none;border-radius:50%;font-size:25px;cursor:pointer;background:#4F5544;color:white;">
+
++
+
+</button>
+
+</div>
+
+</div>
+
+
+<div style="text-align:center;margin:20px 0;">
+
+<p style="color:#666;margin-bottom:3px;">
+Price per person
+</p>
+
+<h3
+id="pricePerPerson"
+style="font-size:32px;color:#222;margin-bottom:5px;">
+
+IDR 625K
+
+</h3>
+
+<p
+id="priceSaving"
+style="color:#6B705C;font-weight:bold;margin-bottom:12px;">
+
+Best Value
+
+</p>
+
+<p style="color:#666;margin-bottom:3px;">
+Total for your group
+</p>
+
+<h3
+id="totalPrice"
+style="font-size:27px;color:#222;">
+
+IDR 3,750K
+
+</h3>
+
+</div>
+
 
 <ul class="combo-list">
 
-<li>West Penida</li>
-<li>East Penida</li>
-<li>Fast boat arrangement</li>
-<li>Hotel transfer</li>
-<li>Package assistance</li>
+<li>🚤 Return Fast Boat</li>
+<li>🚗 Private AC Car + Driver + Petrol</li>
+<li>📸 Driver assistance for photos</li>
+<li>🎟️ Entrance tickets</li>
+<li>🅿️ Parking</li>
+<li>🌴 Private West Nusa Penida Tour</li>
 
 </ul>
 
-<p>
-<strong>
-No online payment required through this website.
-</strong>
+
+<p style="font-size:14px;color:#777;">
+* Government DTW entrance levy is not included.
 </p>
 
+
 <a
+id="nusaWhatsapp"
 class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27d%20like%20to%20ask%20about%20Nusa%20Penida.%20My%20hotel%20is%3A"
+href="#"
 target="_blank">
 
-Ask About Nusa Penida
+Check Availability
 
 </a>
 
@@ -2068,6 +2144,113 @@ aria-hidden="true">
 
 </a>
 
+<script>
 
+/* =========================
+   NUSA PENIDA PRICE CALCULATOR
+========================= */
+
+const nusaPrices = {
+1: 1200000,
+2: 900000,
+3: 780000,
+4: 715000,
+5: 660000,
+6: 625000
+};
+
+let nusaGuests = 6;
+
+function formatRupiah(amount){
+
+return "IDR " + Math.round(amount / 1000).toLocaleString("en-US") + "K";
+
+}
+
+function updateNusaPrice(){
+
+const pricePerPerson = nusaPrices[nusaGuests];
+
+const totalPrice = pricePerPerson * nusaGuests;
+
+document.getElementById("guestCount").textContent = nusaGuests;
+
+document.getElementById("pricePerPerson").textContent =
+formatRupiah(pricePerPerson);
+
+document.getElementById("totalPrice").textContent =
+formatRupiah(totalPrice);
+
+
+/* PRICE MESSAGE */
+
+let savingText = "";
+
+if(nusaGuests === 6){
+
+savingText = "🔥 Best Value";
+
+}else if(nusaGuests > 1){
+
+savingText = "More guests = lower price per person";
+
+}else{
+
+savingText = "Private experience for 1 guest";
+
+}
+
+document.getElementById("priceSaving").textContent =
+savingText;
+
+
+/* WHATSAPP MESSAGE */
+
+const message =
+"Hello Bali Vacation 1st,%0A%0A" +
+"I'd like to book the West Nusa Penida Day Trip.%0A%0A" +
+"Number of Guests: " + nusaGuests + "%0A" +
+"Price: " + formatRupiah(pricePerPerson) + " / person%0A" +
+"Total: " + formatRupiah(totalPrice) + "%0A%0A" +
+"Date:%0A" +
+"Hotel:";
+
+const whatsappURL =
+"https://wa.me/62881038721069?text=" + message;
+
+document.getElementById("nusaWhatsapp").href =
+whatsappURL;
+
+}
+
+
+/* CHANGE NUMBER OF GUESTS */
+
+function changeGuests(change){
+
+nusaGuests += change;
+
+if(nusaGuests < 1){
+
+nusaGuests = 1;
+
+}
+
+if(nusaGuests > 6){
+
+nusaGuests = 6;
+
+}
+
+updateNusaPrice();
+
+}
+
+
+/* INITIAL PRICE */
+
+updateNusaPrice();
+
+</script>
 </body>
 </html>
