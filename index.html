@@ -350,7 +350,63 @@ margin-bottom:10px;
 .feature h3{
 margin-bottom:8px;
 }
+/* =========================
+   GUEST REVIEWS
+========================= */
 
+.reviews-section{
+background:#F5F2EA;
+}
+
+.reviews-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+max-width:900px;
+margin:0 auto;
+}
+
+.review-platform{
+background:#fff;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.07);
+text-align:center;
+}
+
+.review-platform h3{
+font-size:25px;
+margin-bottom:8px;
+color:#222;
+}
+
+.review-rating{
+font-size:22px;
+font-weight:bold;
+color:#6B705C;
+margin-bottom:10px;
+}
+
+.review-platform p{
+color:#666;
+margin-bottom:20px;
+}
+
+.review-platform .button{
+margin-top:5px;
+}
+
+@media(max-width:520px){
+
+.reviews-grid{
+grid-template-columns:1fr;
+}
+
+.review-platform{
+padding:25px 20px;
+}
+
+}
 
 /* =========================
    CONTACT
@@ -1818,7 +1874,90 @@ experience and package.
 
 </section>
 
+<!-- =========================
+     GUEST REVIEWS
+========================= -->
 
+<section class="reviews-section">
+
+<div class="container">
+
+<h2 class="title">
+Guest Reviews
+</h2>
+
+<p class="section-intro">
+See what travelers say about their experiences with Bali Vacation 1st.
+</p>
+
+<div class="reviews-grid">
+
+
+<!-- GOOGLE -->
+
+<div class="review-platform">
+
+<h3>
+⭐ Google Reviews
+</h3>
+
+<div class="review-rating">
+★★★★★
+</div>
+
+<p>
+Read our latest guest reviews and share your own experience with
+Bali Vacation 1st.
+</p>
+
+<a
+class="button"
+href="https://g.page/r/CQOKgecG62dfEBM/review"
+target="_blank"
+rel="noopener">
+
+Review us on Google
+
+</a>
+
+</div>
+
+
+<!-- TRIPADVISOR -->
+
+<div class="review-platform">
+
+<h3>
+⭐ Tripadvisor
+</h3>
+
+<div class="review-rating">
+★★★★★
+</div>
+
+<p>
+Discover reviews from travelers who have experienced Bali with
+Bali Vacation 1st.
+</p>
+
+<a
+class="button"
+href="https://www.tripadvisor.com/Attraction_Review-g297694-d29562301-Reviews-Bali_Vacation_1st-Denpasar_Bali.html"
+target="_blank"
+rel="noopener">
+
+See us on Tripadvisor
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
 <!-- =========================
      PHOTOGRAPHY REFERRAL
 ========================= -->
