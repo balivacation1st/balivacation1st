@@ -638,7 +638,77 @@ padding:12px 20px;
 }
 
 }
+/* =========================
+   INTERACTIVE PRICE BOX
+========================= */
 
+.combo-card:has(#guestCount),
+.combo-card:has(#adventureGuestCount){
+position:relative;
+}
+
+.combo-card:has(#guestCount) > div,
+.combo-card:has(#adventureGuestCount) > div{
+border-radius:16px;
+}
+
+.combo-card:has(#guestCount) button,
+.combo-card:has(#adventureGuestCount) button{
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+font-weight:bold;
+transition:.2s;
+}
+
+.combo-card:has(#guestCount) button:hover,
+.combo-card:has(#adventureGuestCount) button:hover{
+transform:scale(1.08);
+}
+
+.combo-card:has(#guestCount) button:active,
+.combo-card:has(#adventureGuestCount) button:active{
+transform:scale(.94);
+}
+
+#pricePerPerson,
+#adventurePricePerPerson{
+letter-spacing:-.5px;
+}
+
+#totalPrice,
+#adventureTotalPrice{
+letter-spacing:-.3px;
+}
+
+#priceSaving,
+#adventureSaving{
+font-size:14px;
+}
+
+@media(max-width:520px){
+
+.combo-card:has(#guestCount),
+.combo-card:has(#adventureGuestCount){
+padding:22px 18px;
+}
+
+.combo-card:has(#guestCount) button,
+.combo-card:has(#adventureGuestCount) button{
+width:52px !important;
+height:52px !important;
+font-size:27px !important;
+}
+
+#pricePerPerson,
+#adventurePricePerPerson{
+font-size:30px !important;
+}
+
+#totalPrice,
+#adventureTotalPrice{
+font-size:25px !important;
+}
+
+}
 
 /* =========================
    END CSS
