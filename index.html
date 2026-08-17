@@ -2475,7 +2475,8 @@ function updateAdventurePrice(){
     document.getElementById(
         "adventureTotalPrice"
     ).textContent =
-    formatAdventurePrice(totalPrice);
+       "IDR" + totalPrice.toLocalString("en-US");
+   
 
 
     /* PRICE MESSAGE */
