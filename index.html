@@ -2471,12 +2471,10 @@ function updateAdventurePrice(){
     ).textContent =
     formatAdventurePrice(pricePerPerson);
 
-
-    document.getElementById(
-        "adventureTotalPrice"
-    ).textContent =
-       "IDR" + totalPrice.toLocaleString("en-US");
-   
+   document.getElementById(
+    "adventureTotalPrice"
+).textContent =
+    "IDR " + totalPrice.toLocaleString("en-US");
 
 
     /* PRICE MESSAGE */
