@@ -2436,9 +2436,20 @@ let adventureGuests = 6;
 
 function formatAdventurePrice(amount){
 
+    function formatAdventurePrice(amount){
+
+    if(amount >= 1000000){
+
+        return "IDR " +
+        amount.toLocaleString("en-US");
+
+    }
+
     return "IDR " +
     Math.round(amount / 1000).toLocaleString("en-US") +
     "K";
+
+}
 
 }
 
