@@ -2417,6 +2417,8 @@ updateNusaPrice();
 
 <script>
 
+<script>
+
 /* =========================
    ATV + RAFTING + TELAGA SINGHA
    PRICE CALCULATOR
@@ -2434,23 +2436,20 @@ const adventurePrices = {
 let adventureGuests = 6;
 
 
+/* =========================
+   FORMAT PRICE
+========================= */
+
 function formatAdventurePrice(amount){
 
-    if(amount >= 1000000){
-
-        return "IDR " +
-        amount.toLocaleString("en-US");
-
-    }
-
-    return "IDR " +
-    Math.round(amount / 1000).toLocaleString("en-US") +
-    "K";
+    return "IDR " + Math.round(amount / 1000).toLocaleString("en-US") + "K";
 
 }
 
-}
 
+/* =========================
+   UPDATE PRICE
+========================= */
 
 function updateAdventurePrice(){
 
@@ -2463,7 +2462,8 @@ function updateAdventurePrice(){
 
     document.getElementById(
         "adventureGuestCount"
-    ).textContent = adventureGuests;
+    ).textContent =
+    adventureGuests;
 
 
     document.getElementById(
@@ -2471,13 +2471,16 @@ function updateAdventurePrice(){
     ).textContent =
     formatAdventurePrice(pricePerPerson);
 
-   document.getElementById(
-    "adventureTotalPrice"
-).textContent =
+
+    document.getElementById(
+        "adventureTotalPrice"
+    ).textContent =
     "IDR " + totalPrice.toLocaleString("en-US");
 
 
-    /* PRICE MESSAGE */
+    /* =========================
+       PRICE MESSAGE
+    ========================= */
 
     let savingText = "";
 
@@ -2487,23 +2490,24 @@ function updateAdventurePrice(){
 
     }else if(adventureGuests > 1){
 
-        savingText =
-        "More guests = lower price per person";
+        savingText = "More guests = lower price per person";
 
     }else{
 
-        savingText =
-        "Private experience for 1 guest";
+        savingText = "Private experience for 1 guest";
 
     }
 
 
     document.getElementById(
         "adventureSaving"
-    ).textContent = savingText;
+    ).textContent =
+    savingText;
 
 
-    /* WHATSAPP */
+    /* =========================
+       WHATSAPP
+    ========================= */
 
     const message =
     "Hello Bali Vacation 1st,%0A%0A" +
@@ -2514,25 +2518,25 @@ function updateAdventurePrice(){
     "Price: " +
     formatAdventurePrice(pricePerPerson) +
     " / person%0A" +
-    "Total: " +
-    formatAdventurePrice(totalPrice) +
+    "Total: IDR " +
+    totalPrice.toLocaleString("en-US") +
     "%0A%0A" +
     "Date:%0A" +
     "Hotel:";
 
 
-    const whatsappURL =
-    "https://wa.me/62881038721069?text=" +
-    message;
-
-
     document.getElementById(
         "adventureWhatsapp"
     ).href =
-    whatsappURL;
+    "https://wa.me/62881038721069?text=" +
+    message;
 
 }
 
+
+/* =========================
+   CHANGE GUESTS
+========================= */
 
 function changeAdventureGuests(change){
 
@@ -2558,7 +2562,9 @@ function changeAdventureGuests(change){
 }
 
 
-/* INITIAL PRICE */
+/* =========================
+   INITIAL PRICE
+========================= */
 
 updateAdventurePrice();
 
