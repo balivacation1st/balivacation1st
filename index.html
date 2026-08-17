@@ -913,7 +913,9 @@ your day around the activities you want to enjoy.
 <div class="grid">
 
 
-<!-- COMBO 1 -->
+<!-- =========================
+     INTERACTIVE ATV + RAFTING + TELAGA SINGHA
+========================= -->
 
 <div class="combo-card">
 
@@ -922,36 +924,126 @@ ADVENTURE COMBO
 </span>
 
 <h3>
-🔥 ATV + White Water Rafting + Telaga Singha
+🔥 ATV + Rafting + Telaga Singha
 </h3>
 
 <p>
-A full day combining two of Bali's most popular adventures with
-a relaxing experience at Telaga Singha.
+Combine Bali's exciting ATV and white water rafting adventures
+with a relaxing experience at Telaga Singha.
+The more guests you travel with, the lower the price per person.
 </p>
 
-<ul class="combo-list">
+<div style="text-align:center;margin:25px 0;">
 
-<li>🏍️ ATV Adventure</li>
-<li>🌊 White Water Rafting</li>
-<li>🌴 Telaga Singha</li>
-<li>🚗 Private hotel transportation</li>
-<li>🍽️ Lunch can be arranged</li>
+<p style="margin-bottom:8px;color:#666;">
+Number of Guests
+</p>
 
-</ul>
+<div style="display:flex;align-items:center;justify-content:center;gap:18px;">
 
-<a
-class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20ATV%20%2B%20Rafting%20%2B%20Telaga%20Singha%20package.%20%0APlease%20help%20me%20check%20the%20price%20and%20availability.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank">
+<button
+type="button"
+onclick="changeAdventureGuests(-1)"
+style="width:48px;height:48px;border:none;border-radius:50%;font-size:25px;cursor:pointer;background:#4F5544;color:white;">
 
-Check Package Price & Availability
+−
 
-</a>
+</button>
+
+<strong
+id="adventureGuestCount"
+style="font-size:32px;min-width:40px;display:inline-block;">
+
+6
+
+</strong>
+
+<button
+type="button"
+onclick="changeAdventureGuests(1)"
+style="width:48px;height:48px;border:none;border-radius:50%;font-size:25px;cursor:pointer;background:#4F5544;color:white;">
+
++
+
+</button>
+
+</div>
 
 </div>
 
 
+<div style="text-align:center;margin:20px 0;">
+
+<p style="color:#666;margin-bottom:3px;">
+Package price per person
+</p>
+
+<h3
+id="adventurePricePerPerson"
+style="font-size:32px;color:#222;margin-bottom:5px;">
+
+IDR 999K
+
+</h3>
+
+<p
+id="adventureSaving"
+style="color:#6B705C;font-weight:bold;margin-bottom:12px;">
+
+🔥 Best Value
+
+</p>
+
+<p style="color:#666;margin-bottom:3px;">
+Total for your group
+</p>
+
+<h3
+id="adventureTotalPrice"
+style="font-size:27px;color:#222;">
+
+IDR 5,994K
+
+</h3>
+
+</div>
+
+
+<ul class="combo-list">
+
+<li>🏍️ ATV Adventure – approximately 1.5 hours</li>
+<li>🌊 White Water Rafting – approximately 2.5 hours</li>
+<li>🌴 Telaga Singha</li>
+<li>💧 Mineral water</li>
+<li>🍽️ Lunch</li>
+<li>🔐 Locker</li>
+<li>🚿 Shower, towel & soap</li>
+<li>🪖 ATV & rafting safety equipment</li>
+<li>👨‍🏫 Professional ATV & rafting guides</li>
+<li>🏍️ New automatic ATV motorcycles</li>
+<li>🌿 Private ATV track through rice fields, forest, river and mud tracks</li>
+
+</ul>
+
+
+<p style="font-size:14px;color:#777;margin-top:15px;">
+ATV track includes river crossings, forest trails, waterfall,
+climbing sections, elephant carving trail, Gorilla Face cave
+and a final fun speed mud pool.
+</p>
+
+
+<a
+id="adventureWhatsapp"
+class="button"
+href="#"
+target="_blank">
+
+Check Package Availability
+
+</a>
+
+</div>
 <!-- COMBO 2 -->
 
 <div class="combo-card">
@@ -2250,6 +2342,147 @@ updateNusaPrice();
 /* INITIAL PRICE */
 
 updateNusaPrice();
+
+</script>
+
+<script>
+
+/* =========================
+   ATV + RAFTING + TELAGA SINGHA
+   PRICE CALCULATOR
+========================= */
+
+const adventurePrices = {
+    1: 1449000,
+    2: 1199000,
+    3: 1099000,
+    4: 1049000,
+    5: 1019000,
+    6: 999000
+};
+
+let adventureGuests = 6;
+
+
+function formatAdventurePrice(amount){
+
+    return "IDR " +
+    Math.round(amount / 1000).toLocaleString("en-US") +
+    "K";
+
+}
+
+
+function updateAdventurePrice(){
+
+    const pricePerPerson =
+    adventurePrices[adventureGuests];
+
+    const totalPrice =
+    pricePerPerson * adventureGuests;
+
+
+    document.getElementById(
+        "adventureGuestCount"
+    ).textContent = adventureGuests;
+
+
+    document.getElementById(
+        "adventurePricePerPerson"
+    ).textContent =
+    formatAdventurePrice(pricePerPerson);
+
+
+    document.getElementById(
+        "adventureTotalPrice"
+    ).textContent =
+    formatAdventurePrice(totalPrice);
+
+
+    /* PRICE MESSAGE */
+
+    let savingText = "";
+
+    if(adventureGuests === 6){
+
+        savingText = "🔥 Best Value";
+
+    }else if(adventureGuests > 1){
+
+        savingText =
+        "More guests = lower price per person";
+
+    }else{
+
+        savingText =
+        "Private experience for 1 guest";
+
+    }
+
+
+    document.getElementById(
+        "adventureSaving"
+    ).textContent = savingText;
+
+
+    /* WHATSAPP */
+
+    const message =
+    "Hello Bali Vacation 1st,%0A%0A" +
+    "I'd like to book the ATV + Rafting + Telaga Singha package.%0A%0A" +
+    "Number of Guests: " +
+    adventureGuests +
+    "%0A" +
+    "Price: " +
+    formatAdventurePrice(pricePerPerson) +
+    " / person%0A" +
+    "Total: " +
+    formatAdventurePrice(totalPrice) +
+    "%0A%0A" +
+    "Date:%0A" +
+    "Hotel:";
+
+
+    const whatsappURL =
+    "https://wa.me/62881038721069?text=" +
+    message;
+
+
+    document.getElementById(
+        "adventureWhatsapp"
+    ).href =
+    whatsappURL;
+
+}
+
+
+function changeAdventureGuests(change){
+
+    adventureGuests += change;
+
+
+    if(adventureGuests < 1){
+
+        adventureGuests = 1;
+
+    }
+
+
+    if(adventureGuests > 6){
+
+        adventureGuests = 6;
+
+    }
+
+
+    updateAdventurePrice();
+
+}
+
+
+/* INITIAL PRICE */
+
+updateAdventurePrice();
 
 </script>
 </body>
