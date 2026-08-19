@@ -3340,48 +3340,74 @@ d="M16 3C8.82 3 3 8.6 3 15.5c0 2.46.74 4.75 2.02 6.66L3 29l7.04-2.01A13.1 13.1 0
    ADVENTURE PRICE DATA
 ========================= */
 
-/*
-   NETT COST
-
-   ATV + RAFTING = IDR 550,000
-   TELAGA SINGHA = IDR 250,000
-
-   TOTAL NETT = IDR 800,000 / PERSON
-
-
-   SELLING PRICE
-
-   1 GUEST = IDR 1,199,000
-   2 GUESTS = IDR 1,149,000 / PERSON
-   3 GUESTS = IDR 1,099,000 / PERSON
-   4 GUESTS = IDR 1,074,000 / PERSON
-   5 GUESTS = IDR 1,059,000 / PERSON
-   6 GUESTS = IDR 1,049,000 / PERSON
-*/
-
-
 const adventurePrices = {
 
     1: 1199000,
-
     2: 1149000,
-
     3: 1099000,
-
     4: 1074000,
-
     5: 1059000,
-
     6: 1049000
 
 };
 
 
 /* =========================
-   DEFAULT GUESTS
+   DEFAULT SETTINGS
 ========================= */
 
 let adventureGuests = 6;
+
+let adventureCurrency = "AUD";
+
+let adventurePayment = "bank";
+
+
+/* =========================
+   TEMPORARY EXCHANGE RATES
+   IDR → CURRENCY
+========================= */
+
+const adventureRates = {
+
+    IDR: 1,
+
+    AUD: 0.000088,
+
+    USD: 0.000062,
+
+    EUR: 0.000053,
+
+    GBP: 0.000046,
+
+    JPY: 0.0092,
+
+    SGD: 0.000079
+
+};
+
+
+/* =========================
+   CURRENCY SYMBOLS
+========================= */
+
+const adventureCurrencySymbols = {
+
+    IDR: "IDR",
+
+    AUD: "AUD",
+
+    USD: "USD",
+
+    EUR: "EUR",
+
+    GBP: "GBP",
+
+    JPY: "JPY",
+
+    SGD: "SGD"
+
+};
 
 
 /* =========================
@@ -3390,8 +3416,56 @@ let adventureGuests = 6;
 
 function formatAdventurePrice(amount){
 
-    return "IDR " +
-        amount.toLocaleString("en-US");
+    return amount.toLocaleString(
+        "en-US",
+        {
+            maximumFractionDigits: 0
+        }
+    );
+
+}
+
+
+/* =========================
+   CONVERT IDR
+========================= */
+
+function convertAdventurePrice(
+    idrAmount
+){
+
+    const rate =
+        adventureRates[
+            adventureCurrency
+        ] || 1;
+
+    return idrAmount * rate;
+
+}
+
+
+/* =========================
+   GET DISPLAY PRICE
+========================= */
+
+function getAdventureDisplayPrice(
+    idrAmount
+){
+
+    const converted =
+        convertAdventurePrice(
+            idrAmount
+        );
+
+    return (
+        adventureCurrencySymbols[
+            adventureCurrency
+        ] +
+        " " +
+        formatAdventurePrice(
+            converted
+        )
+    );
 
 }
 
@@ -3403,42 +3477,97 @@ function formatAdventurePrice(amount){
 function updateAdventurePrice(){
 
     const pricePerPerson =
-        adventurePrices[adventureGuests];
+        adventurePrices[
+            adventureGuests
+        ];
 
 
     const totalPrice =
-        pricePerPerson * adventureGuests;
-
-
-    /* GUEST COUNT */
-
-    document.getElementById(
-        "adventureGuestCount"
-    ).textContent =
+        pricePerPerson *
         adventureGuests;
 
 
-    /* PRICE PER PERSON */
+    /* =========================
+       PAYMENT CALCULATION
+    ========================= */
 
-    document.getElementById(
-        "adventurePricePerPerson"
-    ).textContent =
-        formatAdventurePrice(
-            pricePerPerson
+    let convenienceFee = 0;
+
+
+    if(
+        adventurePayment ===
+        "online"
+    ){
+
+        convenienceFee =
+            totalPrice * 0.03;
+
+    }
+
+
+    const finalPrice =
+        totalPrice +
+        convenienceFee;
+
+
+    /* =========================
+       GUEST COUNT
+    ========================= */
+
+    const guestElement =
+        document.getElementById(
+            "adventureGuestCount"
         );
 
+    if(guestElement){
 
-    /* TOTAL PRICE */
+        guestElement.textContent =
+            adventureGuests;
 
-    document.getElementById(
-        "adventureTotalPrice"
-    ).textContent =
-        formatAdventurePrice(
-            totalPrice
+    }
+
+
+    /* =========================
+       PRICE PER PERSON
+    ========================= */
+
+    const perPersonElement =
+        document.getElementById(
+            "adventurePricePerPerson"
         );
 
+    if(perPersonElement){
 
-    /* PRICE MESSAGE */
+        perPersonElement.textContent =
+            getAdventureDisplayPrice(
+                pricePerPerson
+            );
+
+    }
+
+
+    /* =========================
+       TOTAL PRICE
+    ========================= */
+
+    const totalElement =
+        document.getElementById(
+            "adventureTotalPrice"
+        );
+
+    if(totalElement){
+
+        totalElement.textContent =
+            getAdventureDisplayPrice(
+                finalPrice
+            );
+
+    }
+
+
+    /* =========================
+       PRICE MESSAGE
+    ========================= */
 
     let savingText = "";
 
@@ -3465,19 +3594,43 @@ function updateAdventurePrice(){
     }
 
 
-    document.getElementById(
-        "adventureSaving"
-    ).textContent =
-        savingText;
+    const savingElement =
+        document.getElementById(
+            "adventureSaving"
+        );
+
+
+    if(savingElement){
+
+        savingElement.textContent =
+            savingText;
+
+    }
 
 
     /* =========================
        WHATSAPP MESSAGE
     ========================= */
 
+    let paymentText =
+        "Local Bank Transfer — No Extra Fee";
+
+
+    if(
+        adventurePayment ===
+        "online"
+    ){
+
+        paymentText =
+            "PayPal / Credit Card — +3% Convenience Fee";
+
+    }
+
+
     const whatsappMessage =
 
         "Hello Bali Vacation 1st," +
+
         "\n\n" +
 
         "I'm interested in the " +
@@ -3489,13 +3642,21 @@ function updateAdventurePrice(){
         adventureGuests +
 
         "\nPrice per Person: " +
-        formatAdventurePrice(
+        getAdventureDisplayPrice(
             pricePerPerson
         ) +
 
-        "\nTotal Price: " +
-        formatAdventurePrice(
+        "\nPackage Total: " +
+        getAdventureDisplayPrice(
             totalPrice
+        ) +
+
+        "\nPayment Method: " +
+        paymentText +
+
+        "\nTotal to Pay: " +
+        getAdventureDisplayPrice(
+            finalPrice
         ) +
 
         "\n\n" +
@@ -3508,15 +3669,24 @@ function updateAdventurePrice(){
     const whatsappURL =
 
         "https://wa.me/62881038721069?text=" +
+
         encodeURIComponent(
             whatsappMessage
         );
 
 
-    document.getElementById(
-        "adventureWhatsApp"
-    ).href =
-        whatsappURL;
+    const whatsappElement =
+        document.getElementById(
+            "adventureWhatsApp"
+        );
+
+
+    if(whatsappElement){
+
+        whatsappElement.href =
+            whatsappURL;
+
+    }
 
 }
 
@@ -3525,13 +3695,14 @@ function updateAdventurePrice(){
    CHANGE GUEST NUMBER
 ========================= */
 
-function changeAdventureGuests(change){
+function changeAdventureGuests(
+    change
+){
 
     const newGuestCount =
-        adventureGuests + change;
+        adventureGuests +
+        change;
 
-
-    /* MINIMUM 1 GUEST */
 
     if(newGuestCount < 1){
 
@@ -3539,8 +3710,6 @@ function changeAdventureGuests(change){
 
     }
 
-
-    /* MAXIMUM 6 GUESTS */
 
     if(newGuestCount > 6){
 
@@ -3552,6 +3721,38 @@ function changeAdventureGuests(change){
     adventureGuests =
         newGuestCount;
 
+
+    updateAdventurePrice();
+
+}
+
+
+/* =========================
+   CHANGE CURRENCY
+========================= */
+
+function changeAdventureCurrency(
+    currency
+){
+
+    adventureCurrency =
+        currency;
+
+    updateAdventurePrice();
+
+}
+
+
+/* =========================
+   CHANGE PAYMENT
+========================= */
+
+function changeAdventurePayment(
+    payment
+){
+
+    adventurePayment =
+        payment;
 
     updateAdventurePrice();
 
@@ -3572,7 +3773,6 @@ document.addEventListener(
 );
 
 </script>
-
 
 </body>
 
