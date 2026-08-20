@@ -45,6 +45,357 @@ content="https://balivacation1st.github.io/balivacation1st/hero.JPG"
 >
 
 
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#F5F2EA;
+color:#333;
+line-height:1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 30px;
+background:rgba(0,0,0,.40);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo img{
+height:52px;
+width:auto;
+display:block;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+align-items:center;
+}
+
+nav li{
+margin-left:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#25D366;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.50),
+rgba(0,0,0,.50)
+),
+url("hero.JPG")
+center center/cover no-repeat;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:100px 20px 50px;
+
+color:white;
+}
+
+.hero-logo{
+margin-bottom:25px;
+}
+
+.hero-logo img{
+width:min(272px,64vw);
+height:auto;
+display:block;
+filter:drop-shadow(0 5px 12px rgba(0,0,0,.45));
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.15;
+margin-bottom:18px;
+text-shadow:0 3px 10px rgba(0,0,0,.5);
+}
+
+.hero p{
+font-size:21px;
+margin-bottom:10px;
+max-width:800px;
+text-shadow:0 2px 6px rgba(0,0,0,.5);
+}
+
+.hero .tagline{
+font-size:17px;
+opacity:.95;
+margin-bottom:8px;
+}
+
+.hero .button{
+margin-top:18px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button{
+display:inline-block;
+background:#4F5544;
+color:#ffffff !important;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+border:none;
+cursor:pointer;
+}
+
+.button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+margin-bottom:15px;
+color:#222;
+}
+
+.section-intro{
+text-align:center;
+max-width:750px;
+margin:0 auto 45px;
+color:#666;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(290px,1fr));
+gap:25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-7px);
+box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+display:block;
+}
+
+.card-content{
+padding:22px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:24px;
+color:#222;
+}
+
+.card p{
+color:#666;
+margin-bottom:16px;
+}
+
+.duration{
+font-weight:bold;
+color:#6B705C !important;
+margin-bottom:12px !important;
+}
+
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured{
+background:#fff;
+}
+
+.featured-badge{
+display:inline-block;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1.5px;
+color:#6B705C;
+margin-bottom:8px;
+}
+
+
+/* =========================
+   COMBO
+========================= */
+
+.combo-section{
+background:#F5F2EA;
+}
+
+.combo-card{
+background:#fff;
+border-radius:18px;
+padding:28px;
+box-shadow:0 10px 25px rgba(0,0,0,.07);
+}
+
+.combo-card h3{
+font-size:25px;
+margin-bottom:12px;
+color:#222;
+}
+
+.combo-card p{
+color:#666;
+margin-bottom:15px;
+}
+
+.combo-list{
+padding-left:20px;
+margin-bottom:20px;
+color:#555;
+}
+
+.combo-list li{
+margin-bottom:7px;
+}
+
+
+/* =========================
+   WATERSPORT OCEAN 3
+========================= */
+
+#watersport .combo-card:first-of-type{
+border:2px solid #6B705C;
+}
+
+#watersport .combo-card:first-of-type .featured-badge{
+display:inline-block;
+margin-bottom:12px;
+}
+
+#watersport .combo-card:first-of-type h3{
+font-size:28px;
+}
+
+#watersport .combo-card:first-of-type h3:last-of-type{
+font-size:30px;
+color:#6B705C;
+margin-top:20px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.feature{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.07);
+text-align:center;
+}
+
+.feature-icon{
+font-size:35px;
+margin-bottom:10px;
+}
+
+.feature h3{
+margin-bottom:8px;
+}
+
+
 /* =========================
    CONTACT
 ========================= */
@@ -59,8 +410,7 @@ max-width:700px;
 margin:0 auto 25px;
 color:#666;
 }
-   
-</style>
+
 
 /* =========================
    REVIEWS
@@ -95,58 +445,6 @@ color:#222;
 font-size:25px;
 letter-spacing:3px;
 margin-bottom:10px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
-
-footer p{
-margin:5px 0;
-color:#ccc;
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-width:58px;
-height:58px;
-background:#25D366;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-text-decoration:none;
-font-size:28px;
-box-shadow:0 5px 20px rgba(0,0,0,.25);
-z-index:1000;
-transition:.3s;
-}
-
-.whatsapp svg{
-width:32px;
-height:32px;
-display:block;
-fill:white;
-}
-
-.whatsapp:hover{
-transform:scale(1.08);
 }
 
 
@@ -221,6 +519,69 @@ color:#666;
 font-size:26px;
 font-weight:bold;
 color:#222;
+}
+
+.currency-selector{
+width:100%;
+padding:12px 14px;
+border:1px solid #ddd;
+border-radius:10px;
+background:#fff;
+font-size:15px;
+color:#333;
+margin-bottom:8px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+footer p{
+margin:5px 0;
+color:#ccc;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:58px;
+height:58px;
+background:#25D366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+font-size:28px;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+z-index:1000;
+transition:.3s;
+}
+
+.whatsapp svg{
+width:32px;
+height:32px;
+display:block;
+fill:white;
+}
+
+.whatsapp:hover{
+transform:scale(1.08);
 }
 
 
@@ -444,520 +805,8 @@ Plan Your Bali Experience
 </a>
 
 </header>
-<!-- =========================
-     ACTIVITIES
-========================= -->
 
-<section
-id="activities"
-class="featured"
->
 
-<div class="container">
-
-<h2 class="title">
-Bali Activities
-</h2>
-
-<p class="section-intro">
-Choose your Bali adventure. From adrenaline-filled activities
-to relaxing experiences, discover something worth remembering.
-</p>
-
-
-<div class="grid">
-
-
-<!-- =========================
-     ATV
-========================= -->
-
-<div class="card">
-
-<img
-src="atv.JPG"
-alt="ATV adventure in Bali"
->
-
-<div class="card-content">
-
-<span class="featured-badge">
-ADVENTURE
-</span>
-
-<h3>
-🏍️ ATV Adventure
-</h3>
-
-<p class="duration">
-⏱ Approximately 1.5 Hours
-</p>
-
-<p>
-Ride through rice fields, jungle, rivers, caves, waterfalls
-and challenging private trails on a brand-new automatic ATV.
-</p>
-
-<ul class="combo-list">
-
-<li>Private off-road trail</li>
-
-<li>Rice fields & jungle</li>
-
-<li>River & muddy tracks</li>
-
-<li>Water fun track</li>
-
-<li>Professional guide</li>
-
-</ul>
-
-<a
-class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20ATV%20Adventure.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
-Book ATV
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     RAFTING
-========================= -->
-
-<div class="card">
-
-<img
-src="rafting.JPG"
-alt="White water rafting in Bali"
->
-
-<div class="card-content">
-
-<span class="featured-badge">
-ADVENTURE
-</span>
-
-<h3>
-🌊 White Water Rafting
-</h3>
-
-<p class="duration">
-⏱ Approximately 2.5 Hours
-</p>
-
-<p>
-Enjoy an exciting river adventure surrounded by Bali's
-tropical scenery with professional rafting guides.
-</p>
-
-<ul class="combo-list">
-
-<li>Professional rafting guide</li>
-
-<li>Life jacket & helmet</li>
-
-<li>Paddle</li>
-
-<li>Shower facilities</li>
-
-<li>Lunch included</li>
-
-</ul>
-
-<a
-class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20White%20Water%20Rafting.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
-Book Rafting
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     WATERSPORTS
-========================= -->
-
-<!-- =========================
-     WATERSPORTS
-========================= -->
-
-<div class="card">
-
-<img
-src="jetski.JPG"
-alt="Bali watersports in Nusa Dua"
->
-
-<div class="card-content">
-
-<span class="featured-badge">
-⭐ MOST POPULAR
-</span>
-
-<h3>
-🌊 Bali Watersports
-</h3>
-
-<p class="duration">
-📍 Nusa Dua
-</p>
-
-<p>
-Experience Bali from the ocean with exciting watersports
-for couples, friends and families.
-</p>
-
-<ul class="combo-list">
-
-<li>⭐ Ocean 3: Banana Boat + Jet Ski + Parasailing</li>
-
-<li>Jet Ski</li>
-
-<li>Parasailing</li>
-
-<li>Banana Boat</li>
-
-<li>Fly Fish</li>
-
-<li>Sea Walker & Snorkeling</li>
-
-</ul>
-
-<p>
-<strong>
-Ocean 3 — 850K / person
-</strong>
-</p>
-
-<a
-class="button"
-href="#watersport"
->
-
-Explore Watersports
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     ATV + RAFTING + TELAGA SINGHA
-========================= -->
-
-<section
-id="packages"
-class="combo-section"
->
-
-<div class="container">
-
-<h2 class="title">
-ATV + Rafting + Telaga Singha
-</h2>
-
-<p class="section-intro">
-One day. Three experiences. A perfect combination of adventure,
-nature and relaxation in Bali.
-</p>
-
-
-<div class="grid">
-
-
-<!-- =========================
-     PACKAGE INFORMATION
-========================= -->
-
-<div class="combo-card">
-
-<span class="featured-badge">
-BEST SELLER
-</span>
-
-<h3>
-🏍️ ATV + 🌊 Rafting + 🌴 Telaga Singha
-</h3>
-
-<p>
-Combine an exciting ATV adventure, white water rafting and
-a relaxing visit to Telaga Singha.
-</p>
-
-
-<h3>
-ATV Adventure
-</h3>
-
-<p>
-Ride brand-new automatic ATVs through a private trail that
-does not use public roads.
-</p>
-
-<ul class="combo-list">
-
-<li>Rice fields</li>
-
-<li>Forest</li>
-
-<li>Downhill cliff trail</li>
-
-<li>River</li>
-
-<li>Muddy snake track</li>
-
-<li>Elephant carving trail</li>
-
-<li>Gorilla Face Cave</li>
-
-<li>Waterfall</li>
-
-<li>Forest uphill trail</li>
-
-<li>Final water mud speed track</li>
-
-</ul>
-
-
-<h3>
-What's Included
-</h3>
-
-<ul class="combo-list">
-
-<li>Mineral water</li>
-
-<li>Lunch</li>
-
-<li>Locker</li>
-
-<li>Shower</li>
-
-<li>Hand towel & soap</li>
-
-<li>Professional ATV guide</li>
-
-<li>Helmet</li>
-
-<li>Boat shoes</li>
-
-<li>Plastic protection for socks</li>
-
-<li>Professional rafting guide</li>
-
-<li>Rafting helmet</li>
-
-<li>Life jacket</li>
-
-<li>Paddle</li>
-
-</ul>
-
-
-<p class="duration">
-ATV: approximately 1.5 hours<br>
-Rafting: approximately 2.5 hours
-</p>
-
-</div>
-
-
-<!-- =========================
-     PRICE CALCULATOR
-========================= -->
-
-<div class="combo-card">
-
-<span class="featured-badge">
-GROUP PRICE
-</span>
-
-<h3>
-Choose Your Group Size
-</h3>
-
-<p>
-The more guests travel together, the lower the price per person.
-</p>
-
-
-<div class="price-calculator">
-
-
-<div class="price-label">
-Number of Guests
-</div>
-
-
-<div class="guest-selector">
-
-
-<button
-class="guest-button"
-type="button"
-onclick="changeAdventureGuests(-1)"
-aria-label="Decrease number of guests"
->
-−
-</button>
-
-
-<span
-class="guest-number"
-id="adventureGuestCount"
->
-6
-</span>
-
-
-<button
-class="guest-button"
-type="button"
-onclick="changeAdventureGuests(1)"
-aria-label="Increase number of guests"
->
-+
-</button>
-
-
-</div>
-
-
-<div class="price-label">
-Price per Person
-</div>
-
-
-<div
-class="price-per-person"
-id="adventurePricePerPerson"
->
-IDR 1,049,000
-</div>
-
-
-<div
-class="price-message"
-id="adventureSaving"
->
-🔥 Best Value — lowest price per person
-</div>
-
-
-<div class="total-label">
-Total Package Price
-</div>
-
-<div class="price-label">
-Currency
-</div>
-
-<select
-    class="currency-selector"
-    onchange="changeAdventureCurrency(this.value)"
-    aria-label="Select currency"
->
-
-    <option value="AUD" selected>AUD 🇦🇺</option>
-    <option value="USD">USD 🇺🇸</option>
-    <option value="EUR">EUR 🇪🇺</option>
-    <option value="GBP">GBP 🇬🇧</option>
-    <option value="JPY">JPY 🇯🇵</option>
-    <option value="SGD">SGD 🇸🇬</option>
-    <option value="IDR">IDR 🇮🇩</option>
-
-</select>
-
-
-<div class="price-label" style="margin-top:18px;">
-Payment Method
-</div>
-
-<select
-    class="currency-selector"
-    onchange="changeAdventurePayment(this.value)"
-    aria-label="Select payment method"
->
-
-    <option value="bank" selected>
-        Local Bank Transfer — No Extra Fee
-    </option>
-
-    <option value="online">
-        PayPal / Credit Card — +3%
-    </option>
-
-</select>
-   
-<div
-class="total-price"
-id="adventureTotalPrice"
->
-IDR 6,294,000
-</div>
-
-
-<a
-id="adventureWhatsApp"
-class="button"
-href="https://wa.me/62881038721069"
-target="_blank"
-rel="noopener"
-style="display:block;margin-top:20px;"
->
-
-Book This Package
-
-</a>
-
-
-</div>
-
-
-<p
-style="
-margin-top:18px;
-font-size:13px;
-color:#777;
-"
->
-
-Prices are shown per person and automatically become lower
-for larger groups.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
 <!-- =========================
      ACTIVITIES
 ========================= -->
@@ -1116,19 +965,25 @@ alt="Bali watersports and jet ski"
 <div class="card-content">
 
 <span class="featured-badge">
-OCEAN ADVENTURE
+⭐ MOST POPULAR
 </span>
 
 <h3>
 🌊 Bali Watersports
 </h3>
 
+<p class="duration">
+📍 Nusa Dua
+</p>
+
 <p>
-Feel the excitement of Bali's southern coastline with a range
-of ocean activities and watersports.
+Experience Bali from the ocean with exciting watersports
+for couples, friends and families.
 </p>
 
 <ul class="combo-list">
+
+<li>⭐ Ocean 3: Banana Boat + Jet Ski + Parasailing</li>
 
 <li>Jet Ski</li>
 
@@ -1136,18 +991,24 @@ of ocean activities and watersports.
 
 <li>Banana Boat</li>
 
-<li>Other watersport activities</li>
+<li>Fly Fish</li>
+
+<li>Sea Walker & Snorkeling</li>
 
 </ul>
 
+<p>
+<strong>
+Ocean 3 — 850K / person
+</strong>
+</p>
+
 <a
 class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Bali%20Watersports.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
+href="#watersport"
 >
 
-Book Watersports
+Explore Watersports
 
 </a>
 
@@ -1285,8 +1146,23 @@ Rafting: approximately 2.5 hours
 
 
 <!-- =========================
-     PRICE CALCULATOR
+     GROUP PRICE CALCULATOR
 ========================= -->
+
+<div class="combo-card">
+
+<span class="featured-badge">
+GROUP PRICE
+</span>
+
+<h3>
+Choose Your Group Size
+</h3>
+
+<p>
+The more guests travel together, the lower the price per person.
+</p>
+
 
 <div
 style="
@@ -1344,9 +1220,6 @@ the lower the price per person.
 </div>
 
 
-<h3>
-Choose Your Group Size
-</h3>
 <div class="price-calculator">
 
 
@@ -1356,7 +1229,6 @@ Number of Guests
 
 
 <div class="guest-selector">
-
 
 <button
 class="guest-button"
@@ -1385,7 +1257,6 @@ aria-label="Increase number of guests"
 +
 </button>
 
-
 </div>
 
 
@@ -1398,7 +1269,7 @@ Price per Person
 class="price-per-person"
 id="adventurePricePerPerson"
 >
-IDR 1,049,000
+AUD 92
 </div>
 
 
@@ -1419,8 +1290,78 @@ Total Package Price
 class="total-price"
 id="adventureTotalPrice"
 >
-IDR 6,294,000
+AUD 554
 </div>
+
+
+<div
+class="price-label"
+style="margin-top:18px;"
+>
+Currency
+</div>
+
+
+<select
+class="currency-selector"
+onchange="changeAdventureCurrency(this.value)"
+aria-label="Select currency"
+>
+
+<option value="AUD" selected>
+AUD 🇦🇺
+</option>
+
+<option value="USD">
+USD 🇺🇸
+</option>
+
+<option value="EUR">
+EUR 🇪🇺
+</option>
+
+<option value="GBP">
+GBP 🇬🇧
+</option>
+
+<option value="JPY">
+JPY 🇯🇵
+</option>
+
+<option value="SGD">
+SGD 🇸🇬
+</option>
+
+<option value="IDR">
+IDR 🇮🇩
+</option>
+
+</select>
+
+
+<div
+class="price-label"
+style="margin-top:18px;"
+>
+Payment Method
+</div>
+
+
+<select
+class="currency-selector"
+onchange="changeAdventurePayment(this.value)"
+aria-label="Select payment method"
+>
+
+<option value="bank" selected>
+Local Bank Transfer — No Extra Fee
+</option>
+
+<option value="online">
+PayPal / Credit Card — +3%
+</option>
+
+</select>
 
 
 <a
@@ -1461,6 +1402,463 @@ for larger groups.
 </div>
 
 </section>
+
+
+<!-- =========================
+     END OF PART 1
+========================= -->
+
+<!-- =========================
+     ACTIVITIES
+========================= -->
+
+<section id="activities" class="featured">
+
+<div class="container">
+
+<h2 class="title">Bali Activities</h2>
+
+<p class="section-intro">
+Choose your Bali adventure. From adrenaline-filled activities
+to relaxing experiences, discover something worth remembering.
+</p>
+
+<div class="grid">
+
+<!-- ATV -->
+
+<div class="card">
+
+<img src="atv.JPG" alt="ATV adventure in Bali">
+
+<div class="card-content">
+
+<span class="featured-badge">ADVENTURE</span>
+
+<h3>🏍️ ATV Adventure</h3>
+
+<p class="duration">
+⏱ Approximately 1.5 Hours
+</p>
+
+<p>
+Ride through rice fields, jungle, rivers, caves, waterfalls
+and challenging private trails on a brand-new automatic ATV.
+</p>
+
+<ul class="combo-list">
+<li>Private off-road trail</li>
+<li>Rice fields & jungle</li>
+<li>River & muddy tracks</li>
+<li>Water fun track</li>
+<li>Professional guide</li>
+</ul>
+
+<a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20ATV%20Adventure.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
+target="_blank"
+rel="noopener">
+Book ATV
+</a>
+
+</div>
+</div>
+
+
+<!-- RAFTING -->
+
+<div class="card">
+
+<img src="rafting.JPG" alt="White water rafting in Bali">
+
+<div class="card-content">
+
+<span class="featured-badge">ADVENTURE</span>
+
+<h3>🌊 White Water Rafting</h3>
+
+<p class="duration">
+⏱ Approximately 2.5 Hours
+</p>
+
+<p>
+Enjoy an exciting river adventure surrounded by Bali's
+tropical scenery with professional rafting guides.
+</p>
+
+<ul class="combo-list">
+<li>Professional rafting guide</li>
+<li>Life jacket & helmet</li>
+<li>Paddle</li>
+<li>Shower facilities</li>
+<li>Lunch included</li>
+</ul>
+
+<a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20White%20Water%20Rafting.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
+target="_blank"
+rel="noopener">
+Book Rafting
+</a>
+
+</div>
+</div>
+
+
+<!-- WATERSPORTS -->
+
+<div class="card">
+
+<img src="jetski.JPG" alt="Bali watersports and jet ski">
+
+<div class="card-content">
+
+<span class="featured-badge">
+⭐ MOST POPULAR
+</span>
+
+<h3>🌊 Bali Watersports</h3>
+
+<p class="duration">
+📍 Nusa Dua
+</p>
+
+<p>
+Experience Bali from the ocean with exciting watersports
+for couples, friends and families.
+</p>
+
+<ul class="combo-list">
+<li>⭐ Ocean 3: Banana Boat + Jet Ski + Parasailing</li>
+<li>Jet Ski</li>
+<li>Parasailing</li>
+<li>Banana Boat</li>
+<li>Fly Fish</li>
+<li>Sea Walker & Snorkeling</li>
+</ul>
+
+<p>
+<strong>Ocean 3 — 850K / person</strong>
+</p>
+
+<a class="button" href="#watersport">
+Explore Watersports
+</a>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- =========================
+     ATV + RAFTING + TELAGA SINGHA
+========================= -->
+
+<section id="packages" class="combo-section">
+
+<div class="container">
+
+<h2 class="title">
+ATV + Rafting + Telaga Singha
+</h2>
+
+<p class="section-intro">
+One day. Three experiences. A perfect combination of adventure,
+nature and relaxation in Bali.
+</p>
+
+<div class="grid">
+
+<!-- PACKAGE INFORMATION -->
+
+<div class="combo-card">
+
+<span class="featured-badge">
+BEST SELLER
+</span>
+
+<h3>
+🏍️ ATV + 🌊 Rafting + 🌴 Telaga Singha
+</h3>
+
+<p>
+Combine an exciting ATV adventure, white water rafting and
+a relaxing visit to Telaga Singha.
+</p>
+
+<h3>ATV Adventure</h3>
+
+<p>
+Ride brand-new automatic ATVs through a private trail that
+does not use public roads.
+</p>
+
+<ul class="combo-list">
+<li>Rice fields</li>
+<li>Forest</li>
+<li>Downhill cliff trail</li>
+<li>River</li>
+<li>Muddy snake track</li>
+<li>Elephant carving trail</li>
+<li>Gorilla Face Cave</li>
+<li>Waterfall</li>
+<li>Forest uphill trail</li>
+<li>Final water mud speed track</li>
+</ul>
+
+<h3>What's Included</h3>
+
+<ul class="combo-list">
+<li>Mineral water</li>
+<li>Lunch</li>
+<li>Locker</li>
+<li>Shower</li>
+<li>Hand towel & soap</li>
+<li>Professional ATV guide</li>
+<li>Helmet</li>
+<li>Boat shoes</li>
+<li>Plastic protection for socks</li>
+<li>Professional rafting guide</li>
+<li>Rafting helmet</li>
+<li>Life jacket</li>
+<li>Paddle</li>
+</ul>
+
+<p class="duration">
+ATV: approximately 1.5 hours<br>
+Rafting: approximately 2.5 hours
+</p>
+
+</div>
+
+
+<!-- PRICE CALCULATOR -->
+
+<div class="combo-card">
+
+<span class="featured-badge">
+GROUP PRICE
+</span>
+
+<div
+style="
+text-align:center;
+margin-top:5px;
+margin-bottom:20px;
+padding:18px;
+background:#F5F2EA;
+border-radius:14px;
+"
+>
+
+<div
+style="
+font-size:13px;
+color:#777;
+letter-spacing:1px;
+font-weight:600;
+"
+>
+FROM
+</div>
+
+<div
+style="
+font-size:30px;
+font-weight:800;
+margin-top:4px;
+"
+>
+IDR 1,049,000
+</div>
+
+<div
+style="
+font-size:14px;
+color:#777;
+margin-top:2px;
+"
+>
+/ person
+</div>
+
+<div
+style="
+font-size:13px;
+color:#777;
+margin-top:8px;
+"
+>
+Group pricing — the more guests travel together,
+the lower the price per person.
+</div>
+
+</div>
+
+<h3>
+Choose Your Group Size
+</h3>
+
+<div class="price-calculator">
+
+<div class="price-label">
+Number of Guests
+</div>
+
+<div class="guest-selector">
+
+<button
+class="guest-button"
+type="button"
+onclick="changeAdventureGuests(-1)"
+aria-label="Decrease number of guests">
+−
+</button>
+
+<span
+class="guest-number"
+id="adventureGuestCount">
+6
+</span>
+
+<button
+class="guest-button"
+type="button"
+onclick="changeAdventureGuests(1)"
+aria-label="Increase number of guests">
++
+</button>
+
+</div>
+
+<div class="price-label">
+Price per Person
+</div>
+
+<div
+class="price-per-person"
+id="adventurePricePerPerson">
+IDR 1,049,000
+</div>
+
+<div
+class="price-message"
+id="adventureSaving">
+🔥 Best Value — lowest price per person
+</div>
+
+<div class="total-label">
+Total Package Price
+</div>
+
+
+<!-- CURRENCY -->
+
+<div class="price-label">
+Currency
+</div>
+
+<select
+class="currency-selector"
+onchange="changeAdventureCurrency(this.value)"
+aria-label="Select currency">
+
+<option value="AUD" selected>
+AUD 🇦🇺
+</option>
+
+<option value="USD">
+USD 🇺🇸
+</option>
+
+<option value="EUR">
+EUR 🇪🇺
+</option>
+
+<option value="GBP">
+GBP 🇬🇧
+</option>
+
+<option value="JPY">
+JPY 🇯🇵
+</option>
+
+<option value="SGD">
+SGD 🇸🇬
+</option>
+
+<option value="IDR">
+IDR 🇮🇩
+</option>
+
+</select>
+
+
+<!-- PAYMENT -->
+
+<div
+class="price-label"
+style="margin-top:18px;">
+Payment Method
+</div>
+
+<select
+class="currency-selector"
+onchange="changeAdventurePayment(this.value)"
+aria-label="Select payment method">
+
+<option value="bank" selected>
+Local Bank Transfer — No Extra Fee
+</option>
+
+<option value="online">
+PayPal / Credit Card — +3%
+</option>
+
+</select>
+
+
+<div
+class="total-price"
+id="adventureTotalPrice">
+IDR 6,294,000
+</div>
+
+
+<a
+id="adventureWhatsApp"
+class="button"
+href="https://wa.me/62881038721069"
+target="_blank"
+rel="noopener"
+style="display:block;margin-top:20px;">
+Book This Package
+</a>
+
+</div>
+
+<p
+style="
+margin-top:18px;
+font-size:13px;
+color:#777;
+">
+Prices are shown per person and automatically become lower
+for larger groups.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
 <!-- =========================
      UBUD EXPERIENCES
 ========================= -->
@@ -1478,8 +1876,89 @@ Explore Ubud through adventure, Balinese culture, traditional arts
 and beautiful countryside.
 </p>
 
-
 <div class="grid">
+
+
+<!-- UBUD ADVENTURE -->
+
+<div class="combo-card">
+
+<span class="featured-badge">
+ADVENTURE & CULTURE
+</span>
+
+<h3>
+🏞️ Ubud Adventure Experience
+</h3>
+
+<p>
+Combine exciting activities with selected cultural and local
+experiences around Ubud.
+</p>
+
+<ul class="combo-list">
+<li>🏍️ ATV Adventure</li>
+<li>🌊 White Water Rafting</li>
+<li>💍 Silver Experience</li>
+<li>🎨 Balinese Painting</li>
+<li>🧵 Traditional Batik</li>
+<li>🪵 Wood Carving</li>
+<li>🌾 Tegallalang Rice Terrace</li>
+<li>🛕 Balinese Temple</li>
+</ul>
+
+<a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20an%20Ubud%20Adventure%20Experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
+target="_blank"
+rel="noopener">
+Plan Ubud Experience
+</a>
+
+</div>
+
+
+<!-- UBUD CULTURE -->
+
+<div class="combo-card">
+
+<span class="featured-badge">
+CULTURE & ART
+</span>
+
+<h3>
+🎭 Ubud Culture & Art
+</h3>
+
+<p>
+A more relaxed way to discover Bali through traditional arts,
+craftsmanship, temples and local culture.
+</p>
+
+<ul class="combo-list">
+<li>🎭 Barong & Keris Dance</li>
+<li>💍 Silver Experience</li>
+<li>🎨 Balinese Painting</li>
+<li>🧵 Traditional Batik</li>
+<li>🪵 Wood Carving</li>
+<li>🛕 Batuan Temple</li>
+<li>🌾 Tegallalang Rice Terrace</li>
+</ul>
+
+<a
+class="button"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Ubud%20Culture%20%26%20Art%20Experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
+target="_blank"
+rel="noopener">
+Plan Ubud Experience
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
 
 <!-- =========================
      WATERSPORTS
@@ -1487,8 +1966,7 @@ and beautiful countryside.
 
 <section
 id="watersport"
-class="featured"
->
+class="featured">
 
 <div class="container">
 
@@ -1502,9 +1980,7 @@ or enjoy more with our popular watersport combinations in Nusa Dua.
 </p>
 
 
-<!-- =========================
-     OCEAN 3
-========================= -->
+<!-- OCEAN 3 -->
 
 <div class="combo-card">
 
@@ -1527,17 +2003,11 @@ experience more of Bali's watersports.
 </p>
 
 <ul class="combo-list">
-
 <li>Banana Boat</li>
-
 <li>Jet Ski with instructor</li>
-
 <li>Parasailing Adventure</li>
-
 <li>Professional instructors</li>
-
 <li>Safety equipment</li>
-
 </ul>
 
 <h3>
@@ -1548,26 +2018,20 @@ experience more of Bali's watersports.
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Ocean%203%20Watersport%20Package.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Ocean 3
-
 </a>
 
 </div>
 
 
-<!-- =========================
-     COMBO EXPERIENCES
-========================= -->
+<!-- COMBO EXPERIENCES -->
 
 <h2 class="title">
 Combo Experiences
 </h2>
 
 <div class="grid">
-
 
 <div class="combo-card">
 
@@ -1587,11 +2051,8 @@ Jet Ski + Parasailing
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Adventure%202%20Watersport%20Package.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Adventure 2
-
 </a>
 
 </div>
@@ -1615,11 +2076,8 @@ Jet Ski + Fly Fish + Parasailing
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Thrill%203%20Watersport%20Package.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Thrill 3
-
 </a>
 
 </div>
@@ -1643,11 +2101,8 @@ Banana Boat + Jet Ski + Fly Fish + Parasailing
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Ultimate%204%20Watersport%20Package.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Ultimate 4
-
 </a>
 
 </div>
@@ -1655,9 +2110,7 @@ Book Ultimate 4
 </div>
 
 
-<!-- =========================
-     INDIVIDUAL ACTIVITIES
-========================= -->
+<!-- INDIVIDUAL ACTIVITIES -->
 
 <h2 class="title">
 Individual Activities
@@ -1665,265 +2118,70 @@ Individual Activities
 
 <div class="grid">
 
-
 <div class="combo-card">
-
-<h3>
-🍌 Banana Boat
-</h3>
-
-<h3>
-150K / person
-</h3>
-
-<a
-class="button"
+<h3>🍌 Banana Boat</h3>
+<h3>150K / person</h3>
+<a class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Banana%20Boat.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
+target="_blank" rel="noopener">
 Book Banana Boat
-
 </a>
-
 </div>
 
-
 <div class="combo-card">
-
-<h3>
-🚤 Jet Ski
-</h3>
-
-<h3>
-350K / person
-</h3>
-
-<a
-class="button"
+<h3>🚤 Jet Ski</h3>
+<h3>350K / person</h3>
+<a class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Jet%20Ski.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
+target="_blank" rel="noopener">
 Book Jet Ski
-
 </a>
-
 </div>
 
-
 <div class="combo-card">
-
-<h3>
-🐟 Fly Fish
-</h3>
-
-<h3>
-350K / person
-</h3>
-
-<a
-class="button"
+<h3>🐟 Fly Fish</h3>
+<h3>350K / person</h3>
+<a class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Fly%20Fish.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
+target="_blank" rel="noopener">
 Book Fly Fish
-
 </a>
-
 </div>
 
-
 <div class="combo-card">
-
-<h3>
-🪂 Parasailing
-</h3>
-
-<h3>
-450K / person
-</h3>
-
-<a
-class="button"
+<h3>🪂 Parasailing</h3>
+<h3>450K / person</h3>
+<a class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Parasailing.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
+target="_blank" rel="noopener">
 Book Parasailing
-
 </a>
-
 </div>
 
-
 <div class="combo-card">
-
-<h3>
-🤿 Snorkeling
-</h3>
-
-<h3>
-300K / person
-</h3>
-
-<a
-class="button"
+<h3>🤿 Snorkeling</h3>
+<h3>300K / person</h3>
+<a class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Snorkeling.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
+target="_blank" rel="noopener">
 Book Snorkeling
-
 </a>
-
 </div>
 
-
 <div class="combo-card">
-
-<h3>
-🌊 Sea Walker
-</h3>
-
-<h3>
-550K / person
-</h3>
-
-<a
-class="button"
+<h3>🌊 Sea Walker</h3>
+<h3>550K / person</h3>
+<a class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Sea%20Walker.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
+target="_blank" rel="noopener">
 Book Sea Walker
-
 </a>
-
 </div>
 
 </div>
 
 </div>
-
 </section>
-<!-- =========================
-     UBUD ADVENTURE
-========================= -->
-
-<div class="combo-card">
-
-<span class="featured-badge">
-ADVENTURE & CULTURE
-</span>
-
-<h3>
-🏞️ Ubud Adventure Experience
-</h3>
-
-<p>
-Combine exciting activities with selected cultural and local
-experiences around Ubud.
-</p>
-
-<ul class="combo-list">
-
-<li>🏍️ ATV Adventure</li>
-
-<li>🌊 White Water Rafting</li>
-
-<li>💍 Silver Experience</li>
-
-<li>🎨 Balinese Painting</li>
-
-<li>🧵 Traditional Batik</li>
-
-<li>🪵 Wood Carving</li>
-
-<li>🌾 Tegallalang Rice Terrace</li>
-
-<li>🛕 Balinese Temple</li>
-
-</ul>
-
-<a
-class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20an%20Ubud%20Adventure%20Experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
-Plan Ubud Experience
-
-</a>
-
-</div>
-
-
-<!-- =========================
-     UBUD CULTURE
-========================= -->
-
-<div class="combo-card">
-
-<span class="featured-badge">
-CULTURE & ART
-</span>
-
-<h3>
-🎭 Ubud Culture & Art
-</h3>
-
-<p>
-A more relaxed way to discover Bali through traditional arts,
-craftsmanship, temples and local culture.
-</p>
-
-<ul class="combo-list">
-
-<li>🎭 Barong & Keris Dance</li>
-
-<li>💍 Silver Experience</li>
-
-<li>🎨 Balinese Painting</li>
-
-<li>🧵 Traditional Batik</li>
-
-<li>🪵 Wood Carving</li>
-
-<li>🛕 Batuan Temple</li>
-
-<li>🌾 Tegallalang Rice Terrace</li>
-
-</ul>
-
-<a
-class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Ubud%20Culture%20%26%20Art%20Experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
-target="_blank"
-rel="noopener"
->
-
-Plan Ubud Experience
-
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
 
 <!-- =========================
      SOUTH BALI
@@ -1942,13 +2200,7 @@ Enjoy Bali's southern coastline with ocean activities, beaches,
 sunset entertainment and a relaxed evening.
 </p>
 
-
 <div class="grid">
-
-
-<!-- =========================
-     SOUTH BALI EXPERIENCE
-========================= -->
 
 <div class="combo-card">
 
@@ -1963,13 +2215,9 @@ OCEAN & SUNSET
 <ul class="combo-list">
 
 <li>🚤 Bali Watersports</li>
-
 <li>🏖️ Melasti Beach</li>
-
 <li>💃 Kecak Dance</li>
-
 <li>🌅 Sunset experience</li>
-
 <li>🍽️ Jimbaran Seafood Dinner</li>
 
 </ul>
@@ -1983,19 +2231,12 @@ the day around your interests.
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20the%20Uluwatu%20%26%20South%20Bali%20Experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Plan South Bali Experience
-
 </a>
 
 </div>
 
-
-<!-- =========================
-     CUSTOM SOUTH BALI
-========================= -->
 
 <div class="combo-card">
 
@@ -2015,13 +2256,9 @@ day based on your preferred activities and schedule.
 <ul class="combo-list">
 
 <li>🚤 Watersports</li>
-
 <li>🏖️ Melasti Beach</li>
-
 <li>💃 Kecak Dance</li>
-
 <li>🍽️ Jimbaran Dinner</li>
-
 <li>🌴 Other South Bali experiences</li>
 
 </ul>
@@ -2030,15 +2267,11 @@ day based on your preferred activities and schedule.
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27d%20like%20to%20customize%20a%20South%20Bali%20experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Customize My Day
-
 </a>
 
 </div>
-
 
 </div>
 
@@ -2064,20 +2297,14 @@ Discover the dramatic coastline and natural beauty of Nusa Penida
 with a private island experience for international travelers.
 </p>
 
-
 <div class="grid">
 
-
-<!-- =========================
-     NUSA PENIDA INFORMATION
-========================= -->
 
 <div class="card">
 
 <img
 src="penida.JPG"
-alt="Nusa Penida private day trip"
->
+alt="Nusa Penida private day trip">
 
 <div class="card-content">
 
@@ -2101,15 +2328,10 @@ transportation on the island.
 <ul class="combo-list">
 
 <li>🚤 Fast boat return</li>
-
 <li>🚗 Private car with AC</li>
-
 <li>👨‍✈️ Driver</li>
-
 <li>⛽ Petrol</li>
-
 <li>📸 Driver assistance for photos</li>
-
 <li>🌴 West or East Penida options</li>
 
 </ul>
@@ -2125,9 +2347,8 @@ are not included and may be charged separately where applicable.
 
 </div>
 
-<!-- =========================
-     NUSA PENIDA PRICE
-========================= -->
+
+<!-- NUSA PENIDA PRICE -->
 
 <div class="combo-card">
 
@@ -2144,8 +2365,6 @@ Private Nusa Penida Day Trip with group pricing.
 </p>
 
 
-<!-- FROM PRICE -->
-
 <div
 style="
 text-align:center;
@@ -2153,8 +2372,7 @@ margin-top:20px;
 padding:20px;
 background:#F5F2EA;
 border-radius:14px;
-"
->
+">
 
 <div
 style="
@@ -2162,8 +2380,7 @@ font-size:13px;
 color:#777;
 letter-spacing:1px;
 font-weight:600;
-"
->
+">
 FROM
 </div>
 
@@ -2172,8 +2389,7 @@ style="
 font-size:30px;
 font-weight:800;
 margin-top:4px;
-"
->
+">
 IDR 700,000
 </div>
 
@@ -2182,8 +2398,7 @@ style="
 font-size:14px;
 color:#777;
 margin-top:2px;
-"
->
+">
 / person
 </div>
 
@@ -2192,8 +2407,7 @@ style="
 font-size:13px;
 color:#777;
 margin-top:10px;
-"
->
+">
 The more guests travel together,
 the lower the price per person.
 </div>
@@ -2201,32 +2415,23 @@ the lower the price per person.
 </div>
 
 
-<!-- GROUP PRICES -->
-
-<details
-style="
-margin-top:18px;
-"
->
+<details style="margin-top:18px;">
 
 <summary
 style="
 cursor:pointer;
 font-weight:700;
 padding:14px 0;
-"
->
+">
 View Group Prices
 </summary>
-
 
 <div
 style="
 display:grid;
 gap:10px;
 margin-top:10px;
-"
->
+">
 
 
 <div
@@ -2238,17 +2443,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-"
->
-
-<span>
-1 Guest
-</span>
-
-<strong>
-IDR 1,200,000 / person
-</strong>
-
+">
+<span>1 Guest</span>
+<strong>IDR 1,200,000 / person</strong>
 </div>
 
 
@@ -2261,17 +2458,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-"
->
-
-<span>
-2 Guests
-</span>
-
-<strong>
-IDR 950,000 / person
-</strong>
-
+">
+<span>2 Guests</span>
+<strong>IDR 950,000 / person</strong>
 </div>
 
 
@@ -2284,17 +2473,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-"
->
-
-<span>
-3 Guests
-</span>
-
-<strong>
-IDR 850,000 / person
-</strong>
-
+">
+<span>3 Guests</span>
+<strong>IDR 850,000 / person</strong>
 </div>
 
 
@@ -2307,17 +2488,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-"
->
-
-<span>
-4 Guests
-</span>
-
-<strong>
-IDR 800,000 / person
-</strong>
-
+">
+<span>4 Guests</span>
+<strong>IDR 800,000 / person</strong>
 </div>
 
 
@@ -2330,17 +2503,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-"
->
-
-<span>
-5 Guests
-</span>
-
-<strong>
-IDR 750,000 / person
-</strong>
-
+">
+<span>5 Guests</span>
+<strong>IDR 750,000 / person</strong>
 </div>
 
 
@@ -2353,19 +2518,10 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-"
->
-
-<span>
-6 Guests
-</span>
-
-<strong>
-IDR 700,000 / person
-</strong>
-
+">
+<span>6 Guests</span>
+<strong>IDR 700,000 / person</strong>
 </div>
-
 
 </div>
 
@@ -2377,12 +2533,9 @@ style="
 margin-top:16px;
 font-size:13px;
 color:#777;
-"
->
-
+">
 Prices are for international guests and are calculated per person
 according to group size.
-
 </p>
 
 
@@ -2391,22 +2544,24 @@ class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20a%20Nusa%20Penida%20Day%20Trip.%20%0ANumber%20of%20Guests%3A%20%0ADate%3A%20%0AHotel%3A"
 target="_blank"
 rel="noopener"
-style="display:block;text-align:center;margin-top:20px;"
->
-
+style="display:block;text-align:center;margin-top:20px;">
 Book Nusa Penida
-
 </a>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <!-- =========================
      MORE EXPERIENCES
 ========================= -->
 
-<section
-class="combo-section"
->
+<section class="combo-section">
 
 <div class="container">
 
@@ -2419,20 +2574,16 @@ From sunrise adventures to wildlife and private transfers,
 make your Bali trip simple and memorable.
 </p>
 
-
 <div class="grid">
 
 
-<!-- =========================
-     MOUNT BATUR
-========================= -->
+<!-- MOUNT BATUR -->
 
 <div class="card">
 
 <img
 src="jeep.JPG"
-alt="Mount Batur Jeep Sunrise experience"
->
+alt="Mount Batur Jeep Sunrise experience">
 
 <div class="card-content">
 
@@ -2454,43 +2605,31 @@ Watch the sunrise around Mount Batur from the comfort of a
 </p>
 
 <ul class="combo-list">
-
 <li>🚙 4WD Jeep</li>
-
 <li>🌅 Sunrise experience</li>
-
 <li>🍳 Breakfast</li>
-
 <li>🚗 Hotel transfer</li>
-
 </ul>
 
 <a
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Mount%20Batur%20Jeep%20Sunrise.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Mount Batur
-
 </a>
 
 </div>
-
 </div>
 
 
-<!-- =========================
-     HORSE RIDING
-========================= -->
+<!-- HORSE RIDING -->
 
 <div class="card">
 
 <img
 src="horse.JPG"
-alt="Horse riding experience in Bali"
->
+alt="Horse riding experience in Bali">
 
 <div class="card-content">
 
@@ -2508,43 +2647,31 @@ natural surroundings.
 </p>
 
 <ul class="combo-list">
-
 <li>Professional guide</li>
-
 <li>Horse riding equipment</li>
-
 <li>Beautiful natural scenery</li>
-
 <li>Suitable for beginners</li>
-
 </ul>
 
 <a
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Horse%20Riding.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Horse Riding
-
 </a>
 
 </div>
-
 </div>
 
 
-<!-- =========================
-     BALI SAFARI
-========================= -->
+<!-- BALI SAFARI -->
 
 <div class="card">
 
 <img
 src="safari.JPG"
-alt="Bali Safari wildlife experience"
->
+alt="Bali Safari wildlife experience">
 
 <div class="card-content">
 
@@ -2565,28 +2692,21 @@ day out surrounded by nature.
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Bali%20Safari.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Bali Safari
-
 </a>
 
 </div>
-
 </div>
 
 
-<!-- =========================
-     BALI ZOO
-========================= -->
+<!-- BALI ZOO -->
 
 <div class="card">
 
 <img
 src="zoo.JPG"
-alt="Bali Zoo experience"
->
+alt="Bali Zoo experience">
 
 <div class="card-content">
 
@@ -2607,28 +2727,21 @@ who want to enjoy Bali's tropical environment.
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Bali%20Zoo.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Bali Zoo
-
 </a>
 
 </div>
-
 </div>
 
 
-<!-- =========================
-     BIRD PARK
-========================= -->
+<!-- BIRD PARK -->
 
 <div class="card">
 
 <img
 src="bird.JPG"
-alt="Bali Bird Park experience"
->
+alt="Bali Bird Park experience">
 
 <div class="card-content">
 
@@ -2649,28 +2762,21 @@ experience in Bali.
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Bali%20Bird%20Park.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Bird Park
-
 </a>
 
 </div>
-
 </div>
 
 
-<!-- =========================
-     AIRPORT TRANSFER
-========================= -->
+<!-- AIRPORT TRANSFER -->
 
 <div class="card">
 
 <img
 src="airport.JPG"
-alt="Bali airport private transfer"
->
+alt="Bali airport private transfer">
 
 <div class="card-content">
 
@@ -2688,37 +2794,25 @@ airport transfer.
 </p>
 
 <ul class="combo-list">
-
 <li>Private car</li>
-
 <li>Professional driver</li>
-
 <li>Hotel or airport pickup</li>
-
 <li>Comfortable AC vehicle</li>
-
 </ul>
 
 <a
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Airport%20Transfer.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AArrival%20or%20Departure%3A%20%0AFlight%20Number%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Book Airport Transfer
-
 </a>
 
 </div>
-
-</div>
-
-
 </div>
 
 </div>
-
+</div>
 </section>
 
 
@@ -2726,9 +2820,7 @@ Book Airport Transfer
      WHY CHOOSE US
 ========================= -->
 
-<section
-class="featured"
->
+<section class="featured">
 
 <div class="container">
 
@@ -2741,15 +2833,12 @@ We focus on making your Bali experience easy, personal and
 worth remembering.
 </p>
 
-
 <div class="features">
 
 
 <div class="feature">
 
-<div class="feature-icon">
-🏍️
-</div>
+<div class="feature-icon">🏍️</div>
 
 <h3>
 Activities First
@@ -2764,9 +2853,7 @@ Choose from Bali's most exciting activities and experiences.
 
 <div class="feature">
 
-<div class="feature-icon">
-🤝
-</div>
+<div class="feature-icon">🤝</div>
 
 <h3>
 Personal Service
@@ -2782,9 +2869,7 @@ want to do.
 
 <div class="feature">
 
-<div class="feature-icon">
-📸
-</div>
+<div class="feature-icon">📸</div>
 
 <h3>
 Local Assistance
@@ -2800,9 +2885,7 @@ photos during selected experiences.
 
 <div class="feature">
 
-<div class="feature-icon">
-💬
-</div>
+<div class="feature-icon">💬</div>
 
 <h3>
 Easy Booking
@@ -2815,14 +2898,13 @@ your Bali experience.
 
 </div>
 
-
 </div>
-
 </div>
-
 </section>
+
+
 <!-- =========================
-     PHOTOGRAPHY & MOMENTS
+     BALI MOMENTS
 ========================= -->
 
 <section class="review-section">
@@ -2838,7 +2920,6 @@ Bali is not only about the places you visit, but the moments
 you take home with you.
 </p>
 
-
 <div class="grid">
 
 
@@ -2846,8 +2927,7 @@ you take home with you.
 
 <img
 src="ayunan.JPG"
-alt="Traveler enjoying a Bali swing experience"
->
+alt="Traveler enjoying a Bali swing experience">
 
 <div class="card-content">
 
@@ -2861,7 +2941,6 @@ the way.
 </p>
 
 </div>
-
 </div>
 
 
@@ -2869,8 +2948,7 @@ the way.
 
 <img
 src="kopi.JPG"
-alt="Traveler enjoying coffee in Bali"
->
+alt="Traveler enjoying coffee in Bali">
 
 <div class="card-content">
 
@@ -2884,7 +2962,6 @@ and enjoying the atmosphere.
 </p>
 
 </div>
-
 </div>
 
 
@@ -2892,8 +2969,7 @@ and enjoying the atmosphere.
 
 <img
 src="atv.JPG"
-alt="Traveler enjoying ATV adventure in Bali"
->
+alt="Traveler enjoying ATV adventure in Bali">
 
 <div class="card-content">
 
@@ -2907,7 +2983,6 @@ of ways to get your adrenaline going.
 </p>
 
 </div>
-
 </div>
 
 
@@ -2915,8 +2990,7 @@ of ways to get your adrenaline going.
 
 <img
 src="melukat.JPG"
-alt="Traveler experiencing Balinese purification ceremony"
->
+alt="Traveler experiencing Balinese purification ceremony">
 
 <div class="card-content">
 
@@ -2930,14 +3004,10 @@ local experiences.
 </p>
 
 </div>
-
-</div>
-
-
 </div>
 
 </div>
-
+</div>
 </section>
 
 
@@ -2945,9 +3015,7 @@ local experiences.
      REVIEWS
 ========================= -->
 
-<section
-class="featured"
->
+<section class="featured">
 
 <div class="container">
 
@@ -2958,7 +3026,6 @@ What Guests Say
 <p class="section-intro">
 Real experiences make the best memories.
 </p>
-
 
 <div class="review-grid">
 
@@ -3016,7 +3083,6 @@ just the usual sightseeing.”
 
 </div>
 
-
 </div>
 
 
@@ -3024,24 +3090,19 @@ just the usual sightseeing.”
 style="
 text-align:center;
 margin-top:30px;
-"
->
+">
 
 <a
 class="button"
 href="https://www.google.com/search?q=Bali+Vacation+1st"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Read More Reviews
-
 </a>
 
 </div>
 
 </div>
-
 </section>
 
 
@@ -3051,8 +3112,7 @@ Read More Reviews
 
 <section
 id="contact"
-class="contact-section"
->
+class="contact-section">
 
 <div class="container">
 
@@ -3066,20 +3126,15 @@ are traveling and where you are staying. We'll help you
 arrange the experience.
 </p>
 
-
 <a
 class="button"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27d%20like%20to%20plan%20my%20Bali%20experience.%20%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Chat With Us on WhatsApp
-
 </a>
 
 </div>
-
 </section>
 
 
@@ -3103,9 +3158,7 @@ Activities. Adventures. Private Experiences.
 Experience Bali, Don't Just See It.
 </p>
 
-<p
-style="margin-top:18px;font-size:13px;"
->
+<p style="margin-top:18px;font-size:13px;">
 © 2026 Bali Vacation 1st. All rights reserved.
 </p>
 
@@ -3121,17 +3174,15 @@ class="whatsapp"
 href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20your%20Bali%20activities%20and%20experiences."
 target="_blank"
 rel="noopener"
-aria-label="Chat with Bali Vacation 1st on WhatsApp"
->
+aria-label="Chat with Bali Vacation 1st on WhatsApp">
 
 <svg
 viewBox="0 0 32 32"
-xmlns="http://www.w3.org/2000/svg"
->
+xmlns="http://www.w3.org/2000/svg">
 
 <path
 d="M16 3C8.82 3 3 8.6 3 15.5c0 2.46.74 4.75 2.02 6.66L3 29l7.04-2.01A13.1 13.1 0 0 0 16 28c7.18 0 13-5.6 13-12.5S23.18 3 16 3zm0 22.5c-1.86 0-3.67-.49-5.26-1.42l-.38-.22-4.18 1.19 1.21-4.03-.25-.4A9.9 9.9 0 0 1 6.1 15.5c0-5.5 4.44-9.97 9.9-9.97s9.9 4.47 9.9 9.97S21.46 25.5 16 25.5zm5.43-7.46c-.3-.15-1.77-.86-2.05-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"
- />
+/>
 
 </svg>
 
@@ -3144,25 +3195,16 @@ d="M16 3C8.82 3 3 8.6 3 15.5c0 2.46.74 4.75 2.02 6.66L3 29l7.04-2.01A13.1 13.1 0
 
 <script>
 
-/* =========================
-   ADVENTURE PRICE DATA
-========================= */
-
 const adventurePrices = {
 
-    1: 1199000,
-    2: 1149000,
-    3: 1099000,
-    4: 1074000,
-    5: 1059000,
-    6: 1049000
+1: 1199000,
+2: 1149000,
+3: 1099000,
+4: 1074000,
+5: 1059000,
+6: 1049000
 
 };
-
-
-/* =========================
-   DEFAULT SETTINGS
-========================= */
 
 let adventureGuests = 6;
 
@@ -3171,413 +3213,313 @@ let adventureCurrency = "AUD";
 let adventurePayment = "bank";
 
 
-/* =========================
-   TEMPORARY EXCHANGE RATES
-   IDR → CURRENCY
-========================= */
-
 const adventureRates = {
 
-    IDR: 1,
+IDR: 1,
 
-    AUD: 0.000088,
+AUD: 0.000088,
 
-    USD: 0.000062,
+USD: 0.000062,
 
-    EUR: 0.000053,
+EUR: 0.000053,
 
-    GBP: 0.000046,
+GBP: 0.000046,
 
-    JPY: 0.0092,
+JPY: 0.0092,
 
-    SGD: 0.000079
+SGD: 0.000079
 
 };
 
-
-/* =========================
-   CURRENCY SYMBOLS
-========================= */
 
 const adventureCurrencySymbols = {
 
-    IDR: "IDR",
+IDR: "IDR",
 
-    AUD: "AUD",
+AUD: "AUD",
 
-    USD: "USD",
+USD: "USD",
 
-    EUR: "EUR",
+EUR: "EUR",
 
-    GBP: "GBP",
+GBP: "GBP",
 
-    JPY: "JPY",
+JPY: "JPY",
 
-    SGD: "SGD"
+SGD: "SGD"
 
 };
 
 
-/* =========================
-   FORMAT PRICE
-========================= */
-
 function formatAdventurePrice(amount){
 
-    return amount.toLocaleString(
-        "en-US",
-        {
-            maximumFractionDigits: 0
-        }
-    );
+return amount.toLocaleString(
+"en-US",
+{
+maximumFractionDigits:0
+}
+);
 
 }
 
 
-/* =========================
-   CONVERT IDR
-========================= */
+function convertAdventurePrice(idrAmount){
 
-function convertAdventurePrice(
-    idrAmount
-){
+const rate =
+adventureRates[adventureCurrency] || 1;
 
-    const rate =
-        adventureRates[
-            adventureCurrency
-        ] || 1;
-
-    return idrAmount * rate;
+return idrAmount * rate;
 
 }
 
 
-/* =========================
-   GET DISPLAY PRICE
-========================= */
+function getAdventureDisplayPrice(idrAmount){
 
-function getAdventureDisplayPrice(
-    idrAmount
-){
+const converted =
+convertAdventurePrice(idrAmount);
 
-    const converted =
-        convertAdventurePrice(
-            idrAmount
-        );
-
-    return (
-        adventureCurrencySymbols[
-            adventureCurrency
-        ] +
-        " " +
-        formatAdventurePrice(
-            converted
-        )
-    );
+return (
+adventureCurrencySymbols[
+adventureCurrency
+]
++
+" "
++
+formatAdventurePrice(converted)
+);
 
 }
 
-
-/* =========================
-   UPDATE PRICE
-========================= */
 
 function updateAdventurePrice(){
 
-    const pricePerPerson =
-        adventurePrices[
-            adventureGuests
-        ];
+const pricePerPerson =
+adventurePrices[adventureGuests];
 
+const totalPrice =
+pricePerPerson *
+adventureGuests;
 
-    const totalPrice =
-        pricePerPerson *
-        adventureGuests;
 
+let convenienceFee = 0;
 
-    /* =========================
-       PAYMENT CALCULATION
-    ========================= */
+if(adventurePayment === "online"){
 
-    let convenienceFee = 0;
+convenienceFee =
+totalPrice * 0.03;
 
+}
 
-    if(
-        adventurePayment ===
-        "online"
-    ){
+const finalPrice =
+totalPrice +
+convenienceFee;
 
-        convenienceFee =
-            totalPrice * 0.03;
 
-    }
+const guestElement =
+document.getElementById(
+"adventureGuestCount"
+);
 
+if(guestElement){
 
-    const finalPrice =
-        totalPrice +
-        convenienceFee;
-
-
-    /* =========================
-       GUEST COUNT
-    ========================= */
-
-    const guestElement =
-        document.getElementById(
-            "adventureGuestCount"
-        );
-
-    if(guestElement){
-
-        guestElement.textContent =
-            adventureGuests;
-
-    }
-
-
-    /* =========================
-       PRICE PER PERSON
-    ========================= */
-
-    const perPersonElement =
-        document.getElementById(
-            "adventurePricePerPerson"
-        );
-
-    if(perPersonElement){
-
-        perPersonElement.textContent =
-            getAdventureDisplayPrice(
-                pricePerPerson
-            );
-
-    }
-
-
-    /* =========================
-       TOTAL PRICE
-    ========================= */
-
-    const totalElement =
-        document.getElementById(
-            "adventureTotalPrice"
-        );
-
-    if(totalElement){
-
-        totalElement.textContent =
-            getAdventureDisplayPrice(
-                finalPrice
-            );
-
-    }
-
-
-    /* =========================
-       PRICE MESSAGE
-    ========================= */
-
-    let savingText = "";
-
-
-    if(adventureGuests === 6){
-
-        savingText =
-            "🔥 Best Value — lowest price per person";
-
-    }
-
-    else if(adventureGuests > 1){
-
-        savingText =
-            "More guests = lower price per person";
-
-    }
-
-    else{
-
-        savingText =
-            "Private experience for 1 guest";
-
-    }
-
-
-    const savingElement =
-        document.getElementById(
-            "adventureSaving"
-        );
-
-
-    if(savingElement){
-
-        savingElement.textContent =
-            savingText;
-
-    }
-
-
-    /* =========================
-       WHATSAPP MESSAGE
-    ========================= */
-
-    let paymentText =
-        "Local Bank Transfer — No Extra Fee";
-
-
-    if(
-        adventurePayment ===
-        "online"
-    ){
-
-        paymentText =
-            "PayPal / Credit Card — +3% Convenience Fee";
-
-    }
-
-
-    const whatsappMessage =
-
-        "Hello Bali Vacation 1st," +
-
-        "\n\n" +
-
-        "I'm interested in the " +
-        "ATV + Rafting + Telaga Singha package." +
-
-        "\n\n" +
-
-        "Number of Guests: " +
-        adventureGuests +
-
-        "\nPrice per Person: " +
-        getAdventureDisplayPrice(
-            pricePerPerson
-        ) +
-
-        "\nPackage Total: " +
-        getAdventureDisplayPrice(
-            totalPrice
-        ) +
-
-        "\nPayment Method: " +
-        paymentText +
-
-        "\nTotal to Pay: " +
-        getAdventureDisplayPrice(
-            finalPrice
-        ) +
-
-        "\n\n" +
-
-        "Date:" +
-
-        "\nHotel:";
-
-
-    const whatsappURL =
-
-        "https://wa.me/62881038721069?text=" +
-
-        encodeURIComponent(
-            whatsappMessage
-        );
-
-
-    const whatsappElement =
-        document.getElementById(
-            "adventureWhatsApp"
-        );
-
-
-    if(whatsappElement){
-
-        whatsappElement.href =
-            whatsappURL;
-
-    }
+guestElement.textContent =
+adventureGuests;
 
 }
 
 
-/* =========================
-   CHANGE GUEST NUMBER
-========================= */
+const perPersonElement =
+document.getElementById(
+"adventurePricePerPerson"
+);
 
-function changeAdventureGuests(
-    change
-){
+if(perPersonElement){
 
-    const newGuestCount =
-        adventureGuests +
-        change;
-
-
-    if(newGuestCount < 1){
-
-        return;
-
-    }
-
-
-    if(newGuestCount > 6){
-
-        return;
-
-    }
-
-
-    adventureGuests =
-        newGuestCount;
-
-
-    updateAdventurePrice();
+perPersonElement.textContent =
+getAdventureDisplayPrice(
+pricePerPerson
+);
 
 }
 
 
-/* =========================
-   CHANGE CURRENCY
-========================= */
+const totalElement =
+document.getElementById(
+"adventureTotalPrice"
+);
 
-function changeAdventureCurrency(
-    currency
-){
+if(totalElement){
 
-    adventureCurrency =
-        currency;
-
-    updateAdventurePrice();
-
-}
-
-
-/* =========================
-   CHANGE PAYMENT
-========================= */
-
-function changeAdventurePayment(
-    payment
-){
-
-    adventurePayment =
-        payment;
-
-    updateAdventurePrice();
+totalElement.textContent =
+getAdventureDisplayPrice(
+finalPrice
+);
 
 }
 
 
-/* =========================
-   INITIALIZE
-========================= */
+let savingText = "";
+
+if(adventureGuests === 6){
+
+savingText =
+"🔥 Best Value — lowest price per person";
+
+}
+
+else if(adventureGuests > 1){
+
+savingText =
+"More guests = lower price per person";
+
+}
+
+else{
+
+savingText =
+"Private experience for 1 guest";
+
+}
+
+
+const savingElement =
+document.getElementById(
+"adventureSaving"
+);
+
+if(savingElement){
+
+savingElement.textContent =
+savingText;
+
+}
+
+
+let paymentText =
+"Local Bank Transfer — No Extra Fee";
+
+if(adventurePayment === "online"){
+
+paymentText =
+"PayPal / Credit Card — +3% Convenience Fee";
+
+}
+
+
+const whatsappMessage =
+
+"Hello Bali Vacation 1st," +
+
+"\n\n" +
+
+"I'm interested in the " +
+"ATV + Rafting + Telaga Singha package." +
+
+"\n\n" +
+
+"Number of Guests: " +
+adventureGuests +
+
+"\nPrice per Person: " +
+getAdventureDisplayPrice(
+pricePerPerson
+) +
+
+"\nPackage Total: " +
+getAdventureDisplayPrice(
+totalPrice
+) +
+
+"\nPayment Method: " +
+paymentText +
+
+"\nTotal to Pay: " +
+getAdventureDisplayPrice(
+finalPrice
+) +
+
+"\n\nDate:" +
+
+"\nHotel:";
+
+
+const whatsappURL =
+
+"https://wa.me/62881038721069?text=" +
+
+encodeURIComponent(
+whatsappMessage
+);
+
+
+const whatsappElement =
+document.getElementById(
+"adventureWhatsApp"
+);
+
+if(whatsappElement){
+
+whatsappElement.href =
+whatsappURL;
+
+}
+
+}
+
+
+function changeAdventureGuests(change){
+
+const newGuestCount =
+adventureGuests +
+change;
+
+if(newGuestCount < 1){
+
+return;
+
+}
+
+if(newGuestCount > 6){
+
+return;
+
+}
+
+adventureGuests =
+newGuestCount;
+
+updateAdventurePrice();
+
+}
+
+
+function changeAdventureCurrency(currency){
+
+adventureCurrency =
+currency;
+
+updateAdventurePrice();
+
+}
+
+
+function changeAdventurePayment(payment){
+
+adventurePayment =
+payment;
+
+updateAdventurePrice();
+
+}
+
 
 document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+"DOMContentLoaded",
+function(){
 
-        updateAdventurePrice();
+updateAdventurePrice();
 
-    }
+}
 );
 
 </script>
