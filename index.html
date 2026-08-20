@@ -181,24 +181,27 @@ margin-top:18px;
 
 /* =========================
    BUTTON
+   UPDATED
 ========================= */
 
 .button{
 display:inline-block;
 background:#4F5544;
 color:#ffffff !important;
-padding:14px 30px;
-border-radius:40px;
+padding:11px 22px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+font-size:14px;
+line-height:1.3;
 transition:.3s;
 border:none;
 cursor:pointer;
 }
 
 .button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+transform:translateY(-2px);
+box-shadow:0 7px 18px rgba(0,0,0,.20);
 }
 
 
@@ -449,91 +452,6 @@ margin-bottom:10px;
 
 
 /* =========================
-   PRICE CALCULATOR
-========================= */
-
-.price-calculator{
-margin-top:25px;
-padding:22px;
-background:#F5F2EA;
-border-radius:16px;
-text-align:center;
-}
-
-.guest-selector{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:22px;
-margin-bottom:18px;
-}
-
-.guest-button{
-width:50px;
-height:50px;
-border:none;
-border-radius:50%;
-font-size:26px;
-background:#4F5544;
-color:white;
-cursor:pointer;
-transition:.2s;
-}
-
-.guest-button:hover{
-transform:scale(1.08);
-}
-
-.guest-number{
-font-size:28px;
-min-width:35px;
-}
-
-.price-label{
-margin-bottom:4px;
-font-size:14px;
-color:#666;
-}
-
-.price-per-person{
-font-size:30px;
-font-weight:bold;
-color:#222;
-margin-bottom:12px;
-}
-
-.price-message{
-font-size:14px;
-color:#6B705C;
-font-weight:bold;
-margin-bottom:18px;
-}
-
-.total-label{
-margin-bottom:4px;
-font-size:14px;
-color:#666;
-}
-
-.total-price{
-font-size:26px;
-font-weight:bold;
-color:#222;
-}
-
-.currency-selector{
-width:100%;
-padding:12px 14px;
-border:1px solid #ddd;
-border-radius:10px;
-background:#fff;
-font-size:15px;
-color:#333;
-margin-bottom:8px;
-}
-
-
-/* =========================
    FOOTER
 ========================= */
 
@@ -582,6 +500,97 @@ fill:white;
 
 .whatsapp:hover{
 transform:scale(1.08);
+}
+
+
+/* =========================
+   PRICE CALCULATOR
+   UPDATED
+========================= */
+
+.price-calculator{
+margin-top:25px;
+padding:20px;
+background:#F5F2EA;
+border-radius:16px;
+text-align:center;
+}
+
+.guest-selector{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+margin-bottom:18px;
+}
+
+.guest-button{
+width:44px;
+height:44px;
+border:none;
+border-radius:50%;
+font-size:23px;
+background:#4F5544;
+color:white;
+cursor:pointer;
+transition:.2s;
+}
+
+.guest-button:hover{
+transform:scale(1.08);
+}
+
+.guest-number{
+font-size:26px;
+min-width:32px;
+}
+
+.price-label{
+margin-bottom:4px;
+font-size:13px;
+color:#666;
+}
+
+.price-per-person{
+font-size:24px;
+font-weight:bold;
+color:#222;
+margin-bottom:10px;
+}
+
+.price-message{
+font-size:13px;
+color:#6B705C;
+font-weight:bold;
+margin-bottom:16px;
+}
+
+.total-label{
+margin-bottom:4px;
+font-size:13px;
+color:#666;
+}
+
+.total-price{
+font-size:22px;
+font-weight:bold;
+color:#222;
+}
+
+
+/* =========================
+   CURRENCY & PAYMENT
+========================= */
+
+.currency-selector{
+width:100%;
+padding:10px 12px;
+border:1px solid #ddd;
+border-radius:10px;
+background:#fff;
+font-size:14px;
+color:#333;
+margin-bottom:5px;
 }
 
 
@@ -645,6 +654,14 @@ font-size:16px;
 font-size:32px;
 }
 
+.price-per-person{
+font-size:23px;
+}
+
+.total-price{
+font-size:21px;
+}
+
 }
 
 
@@ -699,7 +716,26 @@ padding:24px;
 }
 
 .button{
-padding:13px 24px;
+padding:10px 19px;
+font-size:14px;
+}
+
+.price-calculator{
+padding:18px;
+}
+
+.price-per-person{
+font-size:22px;
+}
+
+.total-price{
+font-size:20px;
+}
+
+.guest-button{
+width:42px;
+height:42px;
+font-size:22px;
 }
 
 }
@@ -959,7 +995,7 @@ Book Rafting
 
 <img
 src="jetski.JPG"
-alt="Bali watersports and jet ski"
+alt="Bali watersports in Nusa Dua"
 >
 
 <div class="card-content">
@@ -1146,7 +1182,7 @@ Rafting: approximately 2.5 hours
 
 
 <!-- =========================
-     GROUP PRICE CALCULATOR
+     PRICE CALCULATOR
 ========================= -->
 
 <div class="combo-card">
@@ -1168,8 +1204,8 @@ The more guests travel together, the lower the price per person.
 style="
 text-align:center;
 margin-top:20px;
-margin-bottom:20px;
-padding:18px;
+margin-bottom:18px;
+padding:16px;
 background:#F5F2EA;
 border-radius:14px;
 "
@@ -1177,7 +1213,7 @@ border-radius:14px;
 
 <div
 style="
-font-size:13px;
+font-size:12px;
 color:#777;
 letter-spacing:1px;
 font-weight:600;
@@ -1188,9 +1224,9 @@ FROM
 
 <div
 style="
-font-size:30px;
+font-size:26px;
 font-weight:800;
-margin-top:4px;
+margin-top:3px;
 "
 >
 IDR 1,049,000
@@ -1198,7 +1234,7 @@ IDR 1,049,000
 
 <div
 style="
-font-size:14px;
+font-size:13px;
 color:#777;
 margin-top:2px;
 "
@@ -1208,9 +1244,9 @@ margin-top:2px;
 
 <div
 style="
-font-size:13px;
+font-size:12px;
 color:#777;
-margin-top:8px;
+margin-top:7px;
 "
 >
 Group pricing — the more guests travel together,
@@ -1229,6 +1265,7 @@ Number of Guests
 
 
 <div class="guest-selector">
+
 
 <button
 class="guest-button"
@@ -1257,6 +1294,7 @@ aria-label="Increase number of guests"
 +
 </button>
 
+
 </div>
 
 
@@ -1269,7 +1307,7 @@ Price per Person
 class="price-per-person"
 id="adventurePricePerPerson"
 >
-AUD 92
+IDR 1,049,000
 </div>
 
 
@@ -1286,18 +1324,7 @@ Total Package Price
 </div>
 
 
-<div
-class="total-price"
-id="adventureTotalPrice"
->
-AUD 554
-</div>
-
-
-<div
-class="price-label"
-style="margin-top:18px;"
->
+<div class="price-label">
 Currency
 </div>
 
@@ -1341,7 +1368,7 @@ IDR 🇮🇩
 
 <div
 class="price-label"
-style="margin-top:18px;"
+style="margin-top:15px;"
 >
 Payment Method
 </div>
@@ -1364,13 +1391,21 @@ PayPal / Credit Card — +3%
 </select>
 
 
+<div
+class="total-price"
+id="adventureTotalPrice"
+>
+IDR 6,294,000
+</div>
+
+
 <a
 id="adventureWhatsApp"
 class="button"
 href="https://wa.me/62881038721069"
 target="_blank"
 rel="noopener"
-style="display:block;margin-top:20px;"
+style="display:block;margin-top:16px;text-align:center;"
 >
 
 Book This Package
@@ -1383,8 +1418,8 @@ Book This Package
 
 <p
 style="
-margin-top:18px;
-font-size:13px;
+margin-top:16px;
+font-size:12px;
 color:#777;
 "
 >
