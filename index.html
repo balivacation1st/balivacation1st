@@ -181,71 +181,6 @@ margin-top:16px;
 
 
 /* =========================
-   HERO BEST SELLER
-========================= */
-
-.hero-best-seller{
-margin-top:20px;
-padding:12px 22px 13px;
-
-background:rgba(0,0,0,.38);
-
-border:1px solid rgba(255,255,255,.28);
-border-radius:14px;
-
-backdrop-filter:blur(7px);
--webkit-backdrop-filter:blur(7px);
-
-box-shadow:0 8px 22px rgba(0,0,0,.18);
-
-max-width:370px;
-width:100%;
-
-text-align:center;
-}
-
-.hero-best-seller-label{
-font-size:10px;
-font-weight:bold;
-letter-spacing:1.6px;
-
-color:#F5F2EA;
-
-margin-bottom:3px;
-}
-
-.hero-best-seller-link{
-display:block;
-
-color:white;
-text-decoration:none;
-
-transition:.25s;
-}
-
-.hero-best-seller-title{
-font-size:17px;
-font-weight:800;
-line-height:1.25;
-
-text-shadow:0 2px 6px rgba(0,0,0,.45);
-}
-
-.hero-best-seller-price{
-font-size:12px;
-font-weight:bold;
-
-margin-top:3px;
-
-color:#F5F2EA;
-}
-
-.hero-best-seller-link:hover{
-transform:translateY(-1px);
-}
-
-
-/* =========================
    BUTTON
 ========================= */
 
@@ -411,7 +346,32 @@ margin-bottom:6px;
 
 
 /* =========================
-   WATERSPORT OCEAN 3
+   ATV + RAFTING HERO PACKAGE
+========================= */
+
+#packages{
+background:#F5F2EA;
+}
+
+#packages > .container > .title{
+font-size:39px;
+}
+
+#packages .combo-card:first-child{
+border:2px solid #6B705C;
+}
+
+#packages .combo-card:first-child .featured-badge{
+font-size:12px;
+}
+
+#packages .combo-card:first-child h3:first-of-type{
+font-size:27px;
+}
+
+
+/* =========================
+   WATERSPORT
 ========================= */
 
 #watersport .combo-card:first-of-type{
@@ -698,6 +658,65 @@ margin-top:7px;
 
 
 /* =========================
+   PRICE HIGHLIGHT
+========================= */
+
+.price-highlight{
+font-size:25px;
+font-weight:800;
+color:#222;
+}
+
+.small-price{
+font-size:22px;
+font-weight:800;
+color:#222;
+}
+
+
+/* =========================
+   BOOKING BUTTON
+========================= */
+
+.card .button,
+.combo-card .button{
+margin-top:4px;
+}
+
+
+/* =========================
+   DETAILS / PRICE ROW
+========================= */
+
+details{
+font-size:14px;
+}
+
+details summary{
+list-style:none;
+}
+
+details summary::-webkit-details-marker{
+display:none;
+}
+
+.price-row{
+background:#F5F2EA;
+padding:11px 14px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+font-size:14px;
+}
+
+.price-row strong{
+font-size:14px;
+}
+
+
+/* =========================
    MOBILE
 ========================= */
 
@@ -753,22 +772,12 @@ line-height:1.5;
 font-size:15px;
 }
 
-.hero-best-seller{
-margin-top:17px;
-padding:10px 17px 11px;
-max-width:350px;
-}
-
-.hero-best-seller-title{
-font-size:16px;
-}
-
-.hero-best-seller-price{
-font-size:11px;
-}
-
 .title{
 font-size:31px;
+}
+
+#packages > .container > .title{
+font-size:32px;
 }
 
 }
@@ -814,30 +823,15 @@ font-size:16px;
 font-size:14px;
 }
 
-.hero-best-seller{
-margin-top:15px;
-padding:9px 15px 10px;
-border-radius:12px;
-}
-
-.hero-best-seller-label{
-font-size:9px;
-letter-spacing:1.4px;
-}
-
-.hero-best-seller-title{
-font-size:15px;
-}
-
-.hero-best-seller-price{
-font-size:10px;
-}
-
 section{
 padding:55px 15px;
 }
 
 .title{
+font-size:29px;
+}
+
+#packages > .container > .title{
 font-size:29px;
 }
 
@@ -903,19 +897,6 @@ font-size:15px;
 font-size:13px;
 }
 
-.hero-best-seller{
-margin-top:13px;
-padding:8px 13px 9px;
-}
-
-.hero-best-seller-title{
-font-size:14px;
-}
-
-.hero-best-seller-price{
-font-size:10px;
-}
-
 .button{
 padding:9px 18px;
 font-size:12px;
@@ -925,70 +906,6 @@ font-size:12px;
 font-size:22px;
 }
 
-}
-
-
-/* =========================
-   PRICE HIGHLIGHT
-========================= */
-
-.price-highlight{
-font-size:25px;
-font-weight:800;
-color:#222;
-}
-
-.small-price{
-font-size:22px;
-font-weight:800;
-color:#222;
-}
-
-
-/* =========================
-   BOOKING BUTTON INSIDE CARDS
-========================= */
-
-.card .button,
-.combo-card .button{
-margin-top:4px;
-}
-
-
-/* =========================
-   DETAILS / GROUP PRICE
-========================= */
-
-details{
-font-size:14px;
-}
-
-details summary{
-list-style:none;
-}
-
-details summary::-webkit-details-marker{
-display:none;
-}
-
-
-/* =========================
-   CLEAN PRICE ROW
-========================= */
-
-.price-row{
-background:#F5F2EA;
-padding:11px 14px;
-border-radius:10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-font-size:14px;
-}
-
-.price-row strong{
-font-size:14px;
 }
 
 
@@ -1081,48 +998,20 @@ Experience Bali, Don't Just See It.
 
 
 <p class="tagline">
-Adventure, watersports, island trips & private experiences —
-arranged around what you actually want to do.
+Let us arrange your Bali experience around what you actually want to do.
 </p>
 
 
 <a
 class="button"
-href="#activities"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27d%20like%20to%20plan%20a%20Bali%20experience."
+target="_blank"
+rel="noopener"
 >
 
-Explore Our Experiences
+Plan Your Bali Experience
 
 </a>
-
-
-<!-- =========================
-     HERO BEST SELLER
-========================= -->
-
-<div class="hero-best-seller">
-
-<a
-class="hero-best-seller-link"
-href="#packages"
->
-
-<div class="hero-best-seller-label">
-⭐ BEST SELLER
-</div>
-
-<div class="hero-best-seller-title">
-ATV + RAFTING ADVENTURE
-</div>
-
-<div class="hero-best-seller-price">
-FROM IDR 949K / PERSON
-</div>
-
-</a>
-
-</div>
-
 
 </header>
 
@@ -1184,13 +1073,9 @@ and challenging private trails on a brand-new automatic ATV.
 <ul class="combo-list">
 
 <li>Private off-road trail</li>
-
 <li>Rice fields & jungle</li>
-
 <li>River & muddy tracks</li>
-
 <li>Water fun track</li>
-
 <li>Professional guide</li>
 
 </ul>
@@ -1244,13 +1129,9 @@ tropical scenery with professional rafting guides.
 <ul class="combo-list">
 
 <li>Professional rafting guide</li>
-
 <li>Life jacket & helmet</li>
-
 <li>Paddle</li>
-
 <li>Shower facilities</li>
-
 <li>Lunch included</li>
 
 </ul>
@@ -1304,15 +1185,10 @@ for couples, friends and families.
 <ul class="combo-list">
 
 <li>⭐ Ocean 3: Banana Boat + Jet Ski + Parasailing</li>
-
 <li>Jet Ski</li>
-
 <li>Parasailing</li>
-
 <li>Banana Boat</li>
-
 <li>Fly Fish</li>
-
 <li>Sea Walker & Snorkeling</li>
 
 </ul>
@@ -1496,8 +1372,11 @@ The more guests travel together, the lower the price per person.
 FROM
 </div>
 
-<div class="from-price">
-IDR 949,000
+<div
+class="from-price"
+id="adventureFromPrice"
+>
+IDR 1,049,000
 </div>
 
 <div class="per-person">
@@ -1564,7 +1443,7 @@ Price per Person
 class="price-per-person"
 id="adventurePricePerPerson"
 >
-IDR 949,000
+IDR 1,049,000
 </div>
 
 
@@ -1585,7 +1464,7 @@ Total Package Price
 class="total-price"
 id="adventureTotalPrice"
 >
-IDR 5,694,000
+IDR 6,294,000
 </div>
 
 
@@ -2072,7 +1951,7 @@ Book Jet Ski
 
 <a
 class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Fly%20Fish.%0ADate%3A%20%0A%20Number%20of%20Guests%3A%20%0AHotel%3A"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Fly%20Fish.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
 rel="noopener"
 >
@@ -2120,7 +1999,7 @@ Book Parasailing
 
 <a
 class="button"
-href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Snorkeling.%0ADate%3A%20%0A%20Number%20of%20Guests%3A%20%0AHotel%3A"
+href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%20interested%20in%20Snorkeling.%0ADate%3A%20%0ANumber%20of%20Guests%3A%20%0AHotel%3A"
 target="_blank"
 rel="noopener"
 >
@@ -2602,9 +2481,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%2
 target="_blank"
 rel="noopener"
 >
-
 Book Mount Batur
-
 </a>
 
 </div>
@@ -2653,9 +2530,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%2
 target="_blank"
 rel="noopener"
 >
-
 Book Horse Riding
-
 </a>
 
 </div>
@@ -2695,9 +2570,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%2
 target="_blank"
 rel="noopener"
 >
-
 Book Bali Safari
-
 </a>
 
 </div>
@@ -2737,9 +2610,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%2
 target="_blank"
 rel="noopener"
 >
-
 Book Bali Zoo
-
 </a>
 
 </div>
@@ -2779,9 +2650,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%2
 target="_blank"
 rel="noopener"
 >
-
 Book Bird Park
-
 </a>
 
 </div>
@@ -2830,9 +2699,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27m%2
 target="_blank"
 rel="noopener"
 >
-
 Book Airport Transfer
-
 </a>
 
 </div>
@@ -3149,9 +3016,7 @@ href="https://www.google.com/search?q=Bali+Vacation+1st"
 target="_blank"
 rel="noopener"
 >
-
 Read More Reviews
-
 </a>
 
 </div>
@@ -3188,9 +3053,7 @@ href="https://wa.me/62881038721069?text=Hello%20Bali%20Vacation%201st,%20I%27d%2
 target="_blank"
 rel="noopener"
 >
-
 Chat With Us on WhatsApp
-
 </a>
 
 </div>
@@ -3245,7 +3108,7 @@ xmlns="http://www.w3.org/2000/svg"
 >
 
 <path
-d="M16 3C8.82 3 3 8.6 3 15.5c0 2.46.74 4.75 2.02 6.66L3 29l7.04-2.01A13.1 13.1 0 0 0 16 28c7.18 0 13-5.6 13-12.5S23.18 3 16 3zm0 22.5c-1.86 0-3.67-.49-5.26-1.42l-.38-.22-4.18 1.19 1.21-4.03-.25-.4A9.9 9.9 0 0 1 6.1 15.5c0-5.5 4.44-9.97 9.9-9.97s9.9 4.47 9.9 9.97S21.46 25.5 16 25.5zm5.43-7.46c-.3-.15-1.77-.86-2.05-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"
+d="M16 3C8.82 3 3 8.6 3 15.5c0 2.46.74 4.75 2.02 6.66L3 29l7.04-2.01A13.1 13.1 0 0 0 16 28c7.18 0 13-5.6 13-12.5S23.18 3 16 3zm0 22.5c-1.86 0-3.67-.49-5.26-1.42l-.38-.22-4.18 1.19 1.21-4.03-.25-.4A9.9 9.9 0 0 1 6.1 15.5c0-5.5 4.44-9.97 9.9-9.97s9.9 4.47 9.9 9.97S21.46 25.5 16 25.5zm5.43-7.46c-.3-.15-1.77-.86-2.05-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.2-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"
 />
 
 </svg>
@@ -3255,36 +3118,25 @@ d="M16 3C8.82 3 3 8.6 3 15.5c0 2.46.74 4.75 2.02 6.66L3 29l7.04-2.01A13.1 13.1 0
 
 <!-- =========================
      FINAL JAVASCRIPT
-     ATV + RAFTING PACKAGE
 ========================= -->
 
 <script>
 
-
 /* =========================
-   ATV + RAFTING PRICES
+   ATV + RAFTING PACKAGE
 ========================= */
 
 const adventurePrices = {
 
     1: 1399000,
-
     2: 1349000,
-
     3: 1329000,
-
     4: 1299000,
-
     5: 1279000,
-
     6: 1249000
 
 };
 
-
-/* =========================
-   DEFAULT SETTINGS
-========================= */
 
 let adventureGuests = 6;
 
@@ -3300,40 +3152,24 @@ let adventurePayment = "bank";
 const adventureRates = {
 
     IDR: 1,
-
     AUD: 0.000088,
-
     USD: 0.000062,
-
     EUR: 0.000053,
-
     GBP: 0.000046,
-
     JPY: 0.0092,
-
     SGD: 0.000079
 
 };
 
 
-/* =========================
-   CURRENCY SYMBOLS
-========================= */
-
 const adventureCurrencySymbols = {
 
     IDR: "IDR",
-
     AUD: "AUD",
-
     USD: "USD",
-
     EUR: "EUR",
-
     GBP: "GBP",
-
     JPY: "JPY",
-
     SGD: "SGD"
 
 };
@@ -3401,24 +3237,17 @@ function getAdventureDisplayPrice(idrAmount){
 
 function updateAdventurePrice(){
 
-
     const pricePerPerson =
         adventurePrices[
             adventureGuests
         ];
 
-
     const totalPrice =
         pricePerPerson *
         adventureGuests;
 
-
     let convenienceFee = 0;
 
-
-    /* =========================
-       ONLINE PAYMENT +3%
-    ========================= */
 
     if(
         adventurePayment ===
@@ -3436,15 +3265,10 @@ function updateAdventurePrice(){
         convenienceFee;
 
 
-    /* =========================
-       GUEST COUNT
-    ========================= */
-
     const guestElement =
         document.getElementById(
             "adventureGuestCount"
         );
-
 
     if(guestElement){
 
@@ -3454,15 +3278,10 @@ function updateAdventurePrice(){
     }
 
 
-    /* =========================
-       PRICE PER PERSON
-    ========================= */
-
     const perPersonElement =
         document.getElementById(
             "adventurePricePerPerson"
         );
-
 
     if(perPersonElement){
 
@@ -3474,15 +3293,10 @@ function updateAdventurePrice(){
     }
 
 
-    /* =========================
-       TOTAL PRICE
-    ========================= */
-
     const totalElement =
         document.getElementById(
             "adventureTotalPrice"
         );
-
 
     if(totalElement){
 
@@ -3509,7 +3323,6 @@ function updateAdventurePrice(){
             "🔥 Best Value — lowest price per person";
 
     }
-
     else if(
         adventureGuests === 5
     ){
@@ -3518,7 +3331,6 @@ function updateAdventurePrice(){
             "🔥 Great Value — save more with a group";
 
     }
-
     else if(
         adventureGuests > 1
     ){
@@ -3527,7 +3339,6 @@ function updateAdventurePrice(){
             "More guests = lower price per person";
 
     }
-
     else{
 
         savingText =
@@ -3540,7 +3351,6 @@ function updateAdventurePrice(){
         document.getElementById(
             "adventureSaving"
         );
-
 
     if(savingElement){
 
@@ -3570,7 +3380,7 @@ function updateAdventurePrice(){
 
 
     /* =========================
-       WHATSAPP MESSAGE
+       WHATSAPP
     ========================= */
 
     const whatsappMessage =
@@ -3605,9 +3415,7 @@ function updateAdventurePrice(){
             finalPrice
         ) +
 
-        "\n\n" +
-
-        "Date:" +
+        "\n\nDate:" +
 
         "\nHotel:";
 
@@ -3649,15 +3457,7 @@ function changeAdventureGuests(change){
 
 
     if(
-        newGuestCount < 1
-    ){
-
-        return;
-
-    }
-
-
-    if(
+        newGuestCount < 1 ||
         newGuestCount > 6
     ){
 
@@ -3668,7 +3468,6 @@ function changeAdventureGuests(change){
 
     adventureGuests =
         newGuestCount;
-
 
     updateAdventurePrice();
 
@@ -3715,7 +3514,6 @@ document.addEventListener(
 
     }
 );
-
 
 </script>
 
