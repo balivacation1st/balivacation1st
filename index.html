@@ -1388,7 +1388,15 @@ Professional guide
 
 <p>
 <strong>
-400K / person
+200cc Single — 500K / ATV<br>
+200cc Tandem — 750K / ATV
+</strong>
+</p>
+
+<p>
+<strong>
+350cc Single — 700K / ATV<br>
+350cc Tandem — 1M / ATV
 </strong>
 </p>
 
@@ -1465,7 +1473,7 @@ Lunch included
 
 <p>
 <strong>
-300K / person
+400K / person
 </strong>
 </p>
 
@@ -1575,7 +1583,7 @@ Explore Watersports
 
 
 <!-- =========================
-     ATV + RAFTING PACKAGE
+     ATV + RAFTING + TELAGA SINGHA PACKAGE
 ========================= -->
 
 <section id="packages" class="combo-section">
@@ -1583,13 +1591,13 @@ Explore Watersports
 <div class="container">
 
 <h2 class="title">
-ATV + Rafting Adventure
+ATV + Rafting + Telaga Singha
 </h2>
 
 <p class="section-intro">
-Two of Bali's most exciting adventures in one great-value package.
-Ride an ATV through private trails and experience an exciting
-white water rafting adventure.
+Three exciting Bali experiences in one great-value package.
+Ride an ATV through private trails, experience white water
+rafting and relax at Telaga Singha.
 </p>
 
 <div class="combo-card">
@@ -1599,12 +1607,12 @@ white water rafting adventure.
 </span>
 
 <h3>
-🏍️ ATV + 🌊 White Water Rafting
+🏍️ ATV + 🌊 White Water Rafting + 🌴 Telaga Singha
 </h3>
 
 <p>
-Combine an exciting ATV adventure with white water rafting
-for a full day of action, nature and adventure in Bali.
+Combine an exciting ATV adventure, white water rafting
+and Telaga Singha for a full day of action, nature and relaxation in Bali.
 </p>
 
 <h3>
@@ -1648,6 +1656,15 @@ tropical scenery with professional rafting guides.
 </ul>
 
 <h3>
+Telaga Singha
+</h3>
+
+<p>
+Relax and enjoy the beautiful atmosphere of Telaga Singha
+after your adventure activities.
+</p>
+
+<h3>
 What's Included
 </h3>
 
@@ -1666,13 +1683,14 @@ What's Included
 
 <p>
 <strong>ATV:</strong> approximately 1.5 hours<br>
-<strong>Rafting:</strong> approximately 2.5 hours
+<strong>Rafting:</strong> approximately 2.5 hours<br>
+<strong>Telaga Singha:</strong> leisure experience
 </p>
 
 <div class="price-calculator">
 
 <h3>
-GROUP PRICE
+PACKAGE PRICE
 </h3>
 
 <p>
@@ -1680,8 +1698,7 @@ Choose Your Group Size
 </p>
 
 <p>
-The more guests travel together,
-the lower the price per person.
+ATV + Rafting + Telaga Singha — IDR 1,100,000 / person.
 </p>
 
 <div class="price-display-box">
@@ -1691,7 +1708,7 @@ FROM
 </div>
 
 <div class="from-price" id="adventureFromPrice">
-IDR 650,000
+IDR 1,100,000
 </div>
 
 <div class="per-person">
@@ -1699,8 +1716,7 @@ IDR 650,000
 </div>
 
 <div class="price-note">
-Group pricing — the more guests travel together,
-the lower the price per person.
+ATV + Rafting + Telaga Singha package.
 </div>
 
 </div>
@@ -1746,14 +1762,14 @@ Price per Person
 class="price-per-person"
 id="adventurePricePerPerson"
 >
-IDR 650,000
+IDR 1,100,000
 </div>
 
 <div
 class="price-message"
 id="adventurePriceMessage"
 >
-Great value — ATV + Rafting in one package.
+ATV + Rafting + Telaga Singha package.
 </div>
 
 <p class="total-label">
@@ -1764,7 +1780,7 @@ Total Package Price
 class="total-price"
 id="adventureTotalPrice"
 >
-IDR 3,900,000
+IDR 6,600,000
 </div>
 
 <br>
@@ -1823,8 +1839,7 @@ Book This Package
 </a>
 
 <p class="price-note">
-Prices are shown per person and automatically become lower
-for larger groups.
+Prices are shown per person.
 </p>
 
 </div>
@@ -3088,14 +3103,7 @@ d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.65 6.3L3 29l6.9-1.61A12.94 12.94 0 0
 
 <script>
 
-const adventurePrices = {
-1: 650000,
-2: 650000,
-3: 650000,
-4: 650000,
-5: 650000,
-6: 650000
-};
+const adventurePricePerPerson = 1100000;
 
 let adventureGuests = 6;
 let adventureCurrency = "AUD";
@@ -3121,7 +3129,7 @@ maximumFractionDigits:0
 function updateAdventurePrice(){
 
 const idrPrice =
-adventurePrices[adventureGuests];
+adventurePricePerPerson;
 
 const total =
 idrPrice * adventureGuests;
@@ -3160,25 +3168,14 @@ document.getElementById(
 ).textContent =
 symbol + formatAdventurePrice(convertedPrice);
 
-if(adventureGuests === 6){
-
 document.getElementById(
 "adventurePriceMessage"
 ).textContent =
-"Great value — ATV + Rafting in one package.";
-
-}else{
-
-document.getElementById(
-"adventurePriceMessage"
-).textContent =
-"Great value — ATV + Rafting in one package.";
-
-}
+"ATV + Rafting + Telaga Singha package.";
 
 const message =
 "Hello Bali Vacation 1st,%0A%0A" +
-"I'm interested in the ATV + Rafting Adventure.%0A" +
+"I'm interested in the ATV + Rafting + Telaga Singha Package.%0A" +
 "Number of Guests: " +
 adventureGuests +
 "%0A" +
